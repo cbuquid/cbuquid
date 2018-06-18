@@ -1,0 +1,26 @@
+/* UNIVERSAL */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+  background-color: #f5f5f5; }
+
+.no-vertical-margin {
+  margin: 0 2% !important; }
+
+/* Typography */
+* {
+  font-family: 'Lato', Helvetica, sans-serif;
+  color: #333447;
+  line-height: 1; 
+}
+
+
+.testing {
+  width: percentage(5/7);
+}
