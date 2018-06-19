@@ -11,7 +11,7 @@ https://css-tricks.com/gulp-for-beginners/
 On structure:  
 Everything in the css file we don't want to edit directly.  We can edit existing .scss and if we need to, add new .scss files and @include them into the main styles.scss.
 
-Getting GitHub on your computer
+Syncing to GitHub through Mac GUI
 1. Create account and send to Christina
 2. Christina to add you onto repo
 3. Download GitHub for Mac and connect to the swyfftdesign repo https://desktop.github.com/
