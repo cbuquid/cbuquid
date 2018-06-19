@@ -1,3 +1,5 @@
+/* palette */
+/* fonts */
 /* UNIVERSAL */
 html,
 body {
@@ -13,11 +15,18 @@ body {
 .no-vertical-margin {
   margin: 0 2% !important; }
 
-/* Typography */
 * {
-  font-family: 'Lato', Helvetica, sans-serif;
-  color: #333447;
-  line-height: 1; }
+  font-family: "Lato", Helvetica, sans-serif; }
 
-.testing {
-  width: 71.42857%; }
+/* page elements */
+nav {
+  background-color: #342E39;
+  color: #FFFFFF;
+  height: 60px; }
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    line-height: 60px; }
+    nav ul li {
+      color: #FFFFFF; }

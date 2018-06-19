@@ -1,3 +1,6 @@
+@import 'var';
+
+
 /* UNIVERSAL */
 html,
 body {
@@ -13,14 +16,25 @@ body {
 .no-vertical-margin {
   margin: 0 2% !important; }
 
-/* Typography */
 * {
-  font-family: 'Lato', Helvetica, sans-serif;
-  color: #333447;
-  line-height: 1; 
+  font-family: $lato;
 }
 
+/* page elements */
 
-.testing {
-  width: percentage(5/7);
+nav{
+  background-color: $black;
+  color: $white;
+  height: 60px;
+
+  ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    line-height: 60px;
+    
+    li{
+      color: $white;
+    }
+  }
 }
