@@ -1,0 +1,43 @@
+/* font family */
+$lato: 'Lato', Helvetica, sans-serif;
+
+/* font sizes */
+@mixin body-copy($color){
+	font-size: 14px;
+	letter-spacing: 0.3px;
+	line-height: 1.3;
+	color: $color;
+}
+
+@mixin section-header($color){
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1;
+	color: $color;
+}
+
+@mixin page-header($color){
+	font-size: 36px;
+	font-weight: 300;
+	color: $color;
+	line-height: 1;
+}
+
+/* standard classes */
+.body-copy{
+	@include body-copy($gray-light);
+}
+
+.section-header{
+	@include section-header($black);
+}
+
+.section-header-expand{
+	@include section-header($black);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.page-header{
+	@include page-header($black);
+}
