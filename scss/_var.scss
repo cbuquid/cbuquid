@@ -6,20 +6,8 @@ $gray-light: #8E8E8E;
 $white: #FFFFFF;
 $green-1: #8fbf21;
 
-/* standard mixins */
-@mixin margin-top($value){
-	margin-top: $value * 15px;
-}
+/* spacing unit */
+$unit: 20px;
 
-@mixin margin-bottom($value){
-	margin-bottom: $value * 15px;
-}
 
-.margin-top-15{
-	@include margin-top(1);
-}
-
-.margin-bottom-15{
-	@include margin-bottom(1);
-}
 

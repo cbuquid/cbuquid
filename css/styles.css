@@ -1,11 +1,5 @@
 /* palette */
-/* standard mixins */
-.margin-top-15 {
-  margin-top: 15px; }
-
-.margin-bottom-15 {
-  margin-bottom: 15px; }
-
+/* spacing unit */
 /* font family */
 /* font sizes */
 /* standard classes */
@@ -72,7 +66,7 @@ nav {
       width: 65px; }
 
 .body {
-  margin-top: 60px;
+  margin-top: 40px;
   /* end of sidebar */ }
   .body .sidebar {
     border-right: 1px solid #e0e0e0;
@@ -81,6 +75,8 @@ nav {
     .body .sidebar li {
       margin-bottom: 5px; }
       .body .sidebar li:nth-child(1) {
-        margin-top: 15px; }
+        margin-top: 20px; }
       .body .sidebar li:nth-child(-n+2), .body .sidebar li:nth-child(4) {
-        margin-bottom: 15px; }
+        margin-bottom: 20px; }
+  .body .quotes-table {
+    padding-left: 40px; }
