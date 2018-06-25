@@ -93,24 +93,20 @@ input:focus {
   border-color:#aaa;
 }
 .sort {
-  padding:8px 30px;
-  border-radius: 6px;
-  border:none;
   display:inline-block;
-  color:#fff;
+  color:$gray-light;
   text-decoration: none;
-  background-color: #28a8e0;
   height:30px;
+  @include subhead($black);
 }
 .sort:hover {
   text-decoration: none;
-  background-color:#1b8aba;
 }
 .sort:focus {
   outline:none;
 }
 .sort:after {
-  display:inline-block;
+  display:inline-block !important;
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -126,7 +122,7 @@ input:focus {
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid #fff;
+  border-top: 5px solid $gray-light;
   content:"";
   position: relative;
   top:4px;
@@ -137,7 +133,7 @@ input:focus {
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 5px solid #fff;
+  border-bottom: 5px solid $gray-light;
   content:"";
   position: relative;
   top:-4px;
