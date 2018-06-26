@@ -71,11 +71,92 @@
           </section>
 
           <section id="add-endorsements" class="active">
-            Endorsement section
+
+              <!-- effective date box -->
+              <div class="boxed-section">
+                <div class="row">
+                  <div class="col-lg-2">
+                    <span class="section-header">Effective Date</span>
+                  </div>
+                  <div class="col-lg-8">
+                    <img class="cal-icon" src="img/icons/calendar.png"><span class="value-header">12/28/17</span>
+                  </div>   
+                  <div class="col-lg-2">
+                   <button>Edit</button>
+                  </div>                                    
+                </div>
+              </div>
+              <!-- end of effective date box -->
+
+              <!-- payment type box -->
+              <div class="boxed-section">
+                <div class="row">
+                  <div class="col-lg-2">
+                    <span class="section-header">Payment Type</span>
+                  </div>
+                  <div class="col-lg-8">
+                    <span class="value-header">Monthly Credit Card Payments</span>
+                  </div>   
+                  <div class="col-lg-2">
+                   <button>Edit</button>
+                  </div>                                    
+                </div>
+              </div>
+              <!-- end of payment type box -->    
+
+              <!-- named insured box -->
+              <div class="boxed-section">
+                <div class="row">
+                  <div class="col-lg-2">
+                    <span class="section-header">Named Insured</span>
+                  </div>
+                  <div class="col-lg-8">
+                    <span>Primary Insured:</span>
+                    <div class="value-header">Wanda Geisler</div>
+                    <span>200 Davis St, Vacaville, CA 95687<br/>wandageisler@gmail.com<br/>555-555-5555</span>
+                  </div>   
+                  <div class="col-lg-2">
+                   <button>Edit</button>
+                  </div>                                    
+                </div>
+              </div>
+              <!-- end of named insured box -->      
+
+              <div class="additional-footer">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <button>Additional Named Insured</button>
+                  </div><!--/col -->
+                </div><!-- /row -->
+              </div>  
+              <!-- end of add'l footer -->   
+
+              <!-- add'l insured box -->
+              <div class="boxed-section">
+                <div class="row">
+                  <div class="col-lg-10">
+                    <span class="section-header">Additional Interests</span>
+                  </div>  
+                  <div class="col-lg-2">
+                   <button>Edit</button>
+                  </div>                                    
+                </div>
+              </div>
+              <!-- end of named insured box -->      
+
+              <div class="additional-footer">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <button>Additional Interest</button>
+                  </div><!--/col -->
+                </div><!-- /row -->
+              </div>  
+              <!-- end of add'l footer -->                                  
+
           </section><!-- #add-endorsements -->
 
           <section id="payment-history">
-            payment history section
+            Payment history section
           </section><!-- #payment-history -->
 
           <section id="policy-info">
@@ -88,6 +169,9 @@
   </section>
 
 <script>
+
+
+/* Change section to endorse/payment/policy */
 
 $('#endorse').click(function(){
   $(this).addClass('active');

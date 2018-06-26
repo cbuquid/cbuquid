@@ -1,5 +1,15 @@
 /* palette */
 /* spacing unit */
+/* ui elements */
+.additional-footer {
+  margin: -25px 0 20px 0;
+  background-color: #FAFBFC;
+  border: 1px solid #E8EAEB;
+  padding: 15px;
+  text-align: right;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; }
+
 /* font family */
 /* font sizes */
 /* standard classes */
@@ -36,6 +46,13 @@
   color: #342E39;
   font-weight: 700; }
 
+.value-header {
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000; }
+
+/* overview */
 #manage .page-header .address {
   color: #8fbf21; }
 
@@ -49,14 +66,25 @@
       color: #8fbf21; }
 
 #manage #add-endorsements, #manage #payment-history, #manage #policy-info {
-  height: 300px;
-  background-color: #F2F4F5;
+  min-height: 300px;
   width: 100%;
   margin: 20px 0;
-  text-align: center;
   display: none; }
   #manage #add-endorsements.active, #manage #payment-history.active, #manage #policy-info.active {
     display: block; }
+
+/* add endorsemenrs */
+#add-endorsements {
+  text-align: left;
+  /* date */ }
+  #add-endorsements .boxed-section {
+    border: 1px solid #E8EAEB;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    /* defined in _var.scss */ }
+  #add-endorsements .cal-icon {
+    margin: -10px 10px 0 0; }
 
 /* UNIVERSAL */
 html,
@@ -118,7 +146,8 @@ nav {
     font-size: 14px;
     letter-spacing: 0.3px;
     line-height: 1.3;
-    color: black; }
+    color: black;
+    /* defined in _fonts.scss */ }
   #users #header-row td {
     padding: 0px 10px; }
   #users #header-row span {
@@ -139,7 +168,8 @@ nav {
     font-size: 14px;
     letter-spacing: 0.3px;
     line-height: 1.3;
-    color: black; }
+    color: black;
+    /* defined in _fonts.scss */ }
     #users input::placeholder {
       color: #8E8E8E !important; }
   #users input:focus {
@@ -155,7 +185,8 @@ nav {
     letter-spacing: 0.3px;
     line-height: 1.3;
     color: #342E39;
-    font-weight: 700; }
+    font-weight: 700;
+    /* defined in _fonts.scss */ }
   #users .sort:hover {
     text-decoration: none; }
   #users .sort:focus {
