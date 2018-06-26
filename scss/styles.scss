@@ -1,5 +1,6 @@
 @import 'var';
 @import 'fonts';
+@import 'manage';
 
 
 /* UNIVERSAL */
@@ -67,7 +68,7 @@ nav{
     } /* end of li */
   }/* end of sidebar */
 
-  .quotes-table{
+  .main{
     padding-top: 10px;
   }
 }

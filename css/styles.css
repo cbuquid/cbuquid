@@ -36,6 +36,9 @@
   color: #342E39;
   font-weight: 700; }
 
+#manage .page-header .address {
+  color: #8fbf21; }
+
 /* UNIVERSAL */
 html,
 body {
@@ -83,7 +86,7 @@ nav {
         margin-top: 20px; }
       .body .sidebar li:nth-child(-n+2), .body .sidebar li:nth-child(4) {
         margin-bottom: 20px; }
-  .body .quotes-table {
+  .body .main {
     padding-top: 10px; }
 
 /* Quotes table */
