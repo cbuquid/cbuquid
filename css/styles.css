@@ -39,6 +39,11 @@
 #manage .page-header .address {
   color: #8fbf21; }
 
+#manage #second-nav .selection {
+  border-bottom: 1px solid #8E8E8E; }
+  #manage #second-nav .selection.active {
+    border-bottom: 1px solid #8fbf21; }
+
 /* UNIVERSAL */
 html,
 body {
@@ -167,4 +172,4 @@ nav {
   #users .sort.desc, #users .sort.asc {
     color: #8fbf21; }
 
-/* end #users */
+/* end quotes table - #users */

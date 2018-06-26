@@ -2,4 +2,14 @@
 	.page-header .address{
 		color: $green-1;
 	}
+
+	#second-nav{
+		.selection{
+			border-bottom: 1px solid $gray-light;
+
+			&.active{
+				border-bottom: 1px solid $green-1;
+			}
+		}
+	}
 }
