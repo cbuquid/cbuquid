@@ -90,12 +90,20 @@
 <script>
 
 $('#endorse').click(function(){
+  $(this).addClass('active');
+  $('#payment').removeClass('active');
+  $('#policy').removeClass('active');
+
   $('#add-endorsements').addClass('active');
   $('#payment-history').removeClass('active');
   $('#policy-info').removeClass('active');
 });
 
 $('#payment').click(function(){
+  $(this).addClass('active');
+  $('#policy').removeClass('active');
+  $('#endorse').removeClass('active');
+
   $('#payment-history').addClass('active');
   $('#add-endorsements').removeClass('active');
   $('#policy-info').removeClass('active');
@@ -103,6 +111,10 @@ $('#payment').click(function(){
 
 
 $('#policy').click(function(){
+  $(this).addClass('active');
+  $('#endorse').removeClass('active');
+  $('#payment').removeClass('active');
+
   $('#policy-info').addClass('active');
   $('#add-endorsements').removeClass('active');
   $('#payment-history').removeClass('active');
