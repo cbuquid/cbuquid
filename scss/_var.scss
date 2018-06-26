@@ -1,6 +1,7 @@
 /* palette */
 
 $black: #342E39;
+$gray-white: #FAFBFC;
 $gray-lightest: #F2F4F5;
 $gray-medium: #E8EAEB;
 $gray-light: #8E8E8E;
@@ -10,3 +11,21 @@ $green-1: #8fbf21;
 /* spacing unit */
 $unit: 20px;
 $unit-1: 35px;
+
+/* ui elements */
+@mixin section-box{
+	border: 1px solid $gray-medium;
+	border-radius: 5px;
+	padding: 20px;
+	margin-bottom: $unit;
+}
+
+.additional-footer{
+	margin: -25px 0 $unit 0;
+    background-color: $gray-white;
+    border: 1px solid $gray-medium;
+    padding: 15px;
+    text-align: right;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

@@ -31,7 +31,7 @@
 
 </head>
 
-<body id="manage">
+<body id="manage" class="expanded">
 
   <nav>
     <div class="container">
@@ -41,7 +41,7 @@
             <li><img src="img/wordmark-logo.png"></li>
 
           </ul>
-
+          
         </div><!-- /.col -->
       </div><!-- /.row -->
     </div><!-- /.container -->
@@ -75,14 +75,11 @@
               <!-- effective date box -->
               <div class="boxed-section">
                 <div class="row">
-                  <div class="col-lg-2">
+                  <div class="col-lg-10">
                     <span class="section-header">Effective Date</span>
-                  </div>
-                  <div class="col-lg-8">
-                    <img class="cal-icon" src="img/icons/calendar.png"><span class="value-header">12/28/17</span>
-                  </div>   
+                  </div>  
                   <div class="col-lg-2">
-                   <button>Edit</button>
+                   <button>Cancel</button>
                   </div>                                    
                 </div>
               </div>
@@ -91,14 +88,11 @@
               <!-- payment type box -->
               <div class="boxed-section">
                 <div class="row">
-                  <div class="col-lg-2">
+                  <div class="col-lg-10">
                     <span class="section-header">Payment Type</span>
-                  </div>
-                  <div class="col-lg-8">
-                    <span class="value-header">Monthly Credit Card Payments</span>
-                  </div>   
+                  </div>  
                   <div class="col-lg-2">
-                   <button>Edit</button>
+                   <button>Cancel</button>
                   </div>                                    
                 </div>
               </div>
@@ -107,16 +101,11 @@
               <!-- named insured box -->
               <div class="boxed-section">
                 <div class="row">
-                  <div class="col-lg-2">
+                  <div class="col-lg-10">
                     <span class="section-header">Named Insured</span>
-                  </div>
-                  <div class="col-lg-8">
-                    <span>Primary Insured:</span>
-                    <div class="value-header">Wanda Geisler</div>
-                    <span>200 Davis St, Vacaville, CA 95687<br/>wandageisler@gmail.com<br/>555-555-5555</span>
-                  </div>   
+                  </div>  
                   <div class="col-lg-2">
-                   <button>Edit</button>
+                   <button>cancel</button>
                   </div>                                    
                 </div>
               </div>
@@ -138,32 +127,8 @@
                     <span class="section-header">Additional Interests</span>
                   </div>  
                   <div class="col-lg-2">
-                   <button>Edit</button>
+                   <button>Cancel</button>
                   </div>                                    
-                </div><!-- /row -->
-                <div class="row">
-                  <div class="col-lg-12">
-                  <table>
-                    <tr>
-                      <td>Type</td>
-                      <td>Name</td>
-                      <td>Address</td>
-                      <td>Loan Number</td>
-                    </tr>
-                    <tr>
-                      <td>Mortgagee</td>
-                      <td>J,P. Morgan Chase</td>
-                      <td>PO Box 183166 Columbus, OH 43218</td>
-                      <td>JP-93-810381</td>
-                    </tr>  
-                    <tr>
-                      <td>Mortgagee</td>
-                      <td>J,P. Morgan Chase</td>
-                      <td>PO Box 183166 Columbus, OH 43218</td>
-                      <td>JP-93-810381</td>
-                    </tr>                                            
-                  </table>
-                  </div>
                 </div>
               </div>
               <!-- end of named insured box -->      
@@ -178,7 +143,7 @@
               <!-- end of add'l footer -->     
 
               <hr>
-              <a href="index.html"><button>back</button></a>
+              <a href="manage.html"><button>back</button></a>
               <button class="inactive submit">Submit Endorsements</button>   
               <div class="callout">
                 Swyfft does not currently support coverage endorsements through our web app.  If you’d like to make a coverage endorsement you can contact our customer service representative at 888.888.8888 to quote and process coverage endorsements.
@@ -204,42 +169,17 @@
 
 /* Change section to endorse/payment/policy */
 
-$('#endorse').click(function(){
-  $(this).addClass('active');
-  $('#payment').removeClass('active');
-  $('#policy').removeClass('active');
-
-  $('#add-endorsements').addClass('active');
-  $('#payment-history').removeClass('active');
-  $('#policy-info').removeClass('active');
-});
 
 $('#payment').click(function(){
-  $(this).addClass('active');
-  $('#policy').removeClass('active');
-  $('#endorse').removeClass('active');
 
-  $('#payment-history').addClass('active');
-  $('#add-endorsements').removeClass('active');
-  $('#policy-info').removeClass('active');
 });
 
 
 $('#policy').click(function(){
-  $(this).addClass('active');
-  $('#endorse').removeClass('active');
-  $('#payment').removeClass('active');
 
-  $('#policy-info').addClass('active');
-  $('#add-endorsements').removeClass('active');
-  $('#payment-history').removeClass('active');
 });
 
-/* edit button open new page */
 
-$('.boxed-section button').click(function(){
-  window.location.href = "manage-expand.html";
-});
 
 </script>
 
