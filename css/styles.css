@@ -85,6 +85,9 @@
     /* defined in _var.scss */ }
   #add-endorsements .cal-icon {
     margin: -10px 10px 0 0; }
+  #add-endorsements table {
+    margin-top: 20px;
+    width: 100%; }
 
 /* UNIVERSAL */
 html,
