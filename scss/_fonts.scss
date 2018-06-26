@@ -31,6 +31,13 @@ $lato: 'Lato', Helvetica, sans-serif;
 	line-height: 1;
 }
 
+@mixin tab-header($color){
+	font-size: 20px;
+	font-weight: 700;
+	color: $color;
+	line-height: 1;
+}
+
 /* standard classes */
 .body-copy{
 	@include body-copy($gray-light);
@@ -52,4 +59,8 @@ $lato: 'Lato', Helvetica, sans-serif;
 
 .subhead{
 	@include subhead($black);
+}
+
+.tab-header{
+	@include tab-header($gray-medium)
 }

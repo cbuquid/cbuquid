@@ -36,16 +36,35 @@
   color: #342E39;
   font-weight: 700; }
 
+.tab-header {
+  font-size: 20px;
+  font-weight: 700;
+  color: #E8EAEB;
+  line-height: 1; }
+
 #manage .page-header .address {
   color: #8fbf21; }
 
 #manage #second-nav {
-  margin-top: 20px; }
+  width: 97%;
+  margin: 35px auto; }
   #manage #second-nav .selection {
-    border-bottom: 1px solid #8E8E8E;
+    font-size: 20px;
+    font-weight: 700;
+    color: #E8EAEB;
+    line-height: 1;
+    width: 33%;
+    padding-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #E8EAEB;
     cursor: pointer; }
     #manage #second-nav .selection.active {
-      border-bottom: 1px solid #8fbf21;
+      font-size: 20px;
+      font-weight: 700;
+      color: #8fbf21;
+      line-height: 1;
+      width: 33%;
+      border-bottom: 2px solid #8fbf21;
       color: #8fbf21; }
 
 #manage #add-endorsements, #manage #payment-history, #manage #policy-info {
