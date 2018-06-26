@@ -5,13 +5,20 @@
 	}
 
 	#second-nav{
-		margin-top: $unit;
+		width: 97%;
+		margin: $unit-1 auto;
 		.selection{
-			border-bottom: 1px solid $gray-light;
+			@include tab-header($gray-medium);
+			width: 33%;
+			padding-bottom: $unit;
+			text-align: center;
+			border-bottom: 2px solid $gray-medium;
 			cursor: pointer;
 
 			&.active{
-				border-bottom: 1px solid $green-1;
+				@include tab-header($green-1);
+				width: 33%;
+				border-bottom: 2px solid $green-1;
 				color: $green-1;
 			}
 		}
@@ -32,6 +39,7 @@
 /* add endorsemenrs */
 #add-endorsements{
 	text-align: left;
+}
 
 	.boxed-section{
 		@include section-box; /* defined in _var.scss */

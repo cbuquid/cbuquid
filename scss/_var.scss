@@ -10,6 +10,7 @@ $green-1: #8fbf21;
 
 /* spacing unit */
 $unit: 20px;
+$unit-1: 35px;
 
 /* ui elements */
 @mixin section-box{
@@ -28,6 +29,3 @@ $unit: 20px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-
-
-
