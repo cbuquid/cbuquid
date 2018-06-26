@@ -14,7 +14,6 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 
   <!--page style files -->
-   <link rel="stylesheet" href="css/var.css">
     <link rel="stylesheet" href="css/styles.css">
 
   <!--[if lt IE 9]>
@@ -65,25 +64,51 @@
 
           <section id="second-nav">
             <div class="row">
-              <div class="col-lg-4 selection active">Add Endorsements</div>
-              <div class="col-lg-4 selection">Payment History</div>
-              <div class="col-lg-4 selection">Policy Info</div>
+              <div id="endorse" class="col-lg-4 selection active">Add Endorsements</div>
+              <div id="payment" class="col-lg-4 selection">Payment History</div>
+              <div id="policy" class="col-lg-4 selection">Policy Info</div>
             </div><!--/row -->
           </section>
 
-          <section id="add-endorsements">
+          <section id="add-endorsements" class="active">
+            Endorsement section
           </section><!-- #add-endorsements -->
 
           <section id="payment-history">
+            payment history section
           </section><!-- #payment-history -->
 
           <section id="policy-info">
+            policy info section
           </section><!-- #policy-info -->
 
         </div><!-- /col -->
       </div><!-- /row -->
     </div><!-- /container -->
   </section>
+
+<script>
+
+$('#endorse').click(function(){
+  $('#add-endorsements').addClass('active');
+  $('#payment-history').removeClass('active');
+  $('#policy-info').removeClass('active');
+});
+
+$('#payment').click(function(){
+  $('#payment-history').addClass('active');
+  $('#add-endorsements').removeClass('active');
+  $('#policy-info').removeClass('active');
+});
+
+
+$('#policy').click(function(){
+  $('#policy-info').addClass('active');
+  $('#add-endorsements').removeClass('active');
+  $('#payment-history').removeClass('active');
+});
+
+</script>
 
 </body>
 </html>

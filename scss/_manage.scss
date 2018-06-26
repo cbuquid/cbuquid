@@ -4,12 +4,29 @@
 	}
 
 	#second-nav{
+		margin-top: $unit;
 		.selection{
 			border-bottom: 1px solid $gray-light;
+			cursor: pointer;
 
 			&.active{
 				border-bottom: 1px solid $green-1;
 			}
 		}
 	}
+
+	#add-endorsements, #payment-history, #policy-info{
+		height: 300px;
+		background-color: $gray-lightest;
+		width: 100%;
+		margin: 20px 0;
+		text-align: center;
+		display: none;
+
+		&.active{
+			display: block;
+		}
+	}
+
+
 }
