@@ -57,7 +57,7 @@ table{
 
 #submit{
 	position: absolute;
-	right: 0;
+	right: 15px;
 }
 
 #callout{
@@ -68,14 +68,3 @@ table{
 
 }
 
-.alternating-colors{
-
-	td{
-		padding: 15px 10px;
-	}
-
-	tr:nth-child(odd){
-      background-color: $gray-lightest;
-  }
-
-} 

@@ -68,3 +68,79 @@ button.back{
 button.manage{
     @include primary-button("../img/icons/arrow-right.png");
 }
+
+button.cancel{
+    @include primary-button("../img/icons/undo.png");
+}
+
+/* input styles */
+.tab-radio {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    height: 40px;
+
+    li {
+        float:left;
+        margin:0 $unit 0 0;
+        min-width:150px;
+        height:40px;
+        position:relative;
+        text-align: center;
+        @include body-copy($gray-dark);
+    }
+
+    label, input{
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+    }
+
+    input[type="radio"] {
+        opacity:0;
+        z-index:100;
+    }  
+
+    input[type="radio"]:checked + label,
+    .Checked + label {
+        background: $green-1;
+        color: $white !important;
+    }
+
+    label {
+        background-color: $gray-lightest;
+        cursor:pointer;
+        z-index:90;
+        border-radius: 30px;
+        line-height: 40px;
+        height: 40px;        
+        transition: $transition;
+    }
+
+    label:hover {
+         background:$gray-medium;
+    }    
+}
+
+input{
+    border-radius: 30px;
+    height: 40px;
+    border: 1px solid $gray-medium;
+    cursor: pointer;
+    padding: 0 $unit-1;
+    display: block;
+    width: 100%;
+    transition: $transition;
+
+    &:focus{
+        outline: none;
+        border: 1px solid $green-1;
+    }
+
+    &:hover{
+        border: 1px solid $green-1;
+    }    
+}

@@ -1,3 +1,26 @@
+/* a and button overwrites */
+a{
+	color: $green-1;
+	text-decoration: none !important;
+	padding-bottom:2px;
+
+	&:hover{
+		color: $green-1;
+		border-bottom: 1px solid $green-1;
+		margin-bottom: -1px;
+	}
+}
+
+button a{
+	color: unset;
+
+	&:hover{
+		color: unset;
+		border-bottom: unset;
+		margin-bottom: unset;
+	}
+}
+
 /* font family */
 $lato: 'Lato', Helvetica, sans-serif;
 
