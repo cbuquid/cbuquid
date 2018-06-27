@@ -1,5 +1,6 @@
 /* palette */
 /* spacing unit */
+/* transitions */
 /* ui elements */
 .additional-footer {
   margin: -25px 0 15px 0;
@@ -67,6 +68,142 @@
   line-height: 1;
   color: #000; }
 
+button.secondary {
+  background-color: #8fbf21;
+  color: #FFFFFF;
+  border: none; }
+  button.secondary:hover {
+    background-color: #342E39;
+    border: none; }
+
+button {
+  padding: 10px 30px;
+  height: 40px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  border: 1px solid #E8EAEB;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+  color: #342E39;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  position: relative;
+  text-transform: capitalize; }
+  button:hover {
+    border: 1px solid #8fbf21; }
+  button:focus {
+    outline: none; }
+
+button.edit {
+  padding: 10px 30px 10px 45px;
+  height: 40px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  border: 1px solid #E8EAEB;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+  color: #342E39;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  position: relative;
+  text-transform: capitalize; }
+  button.edit:before {
+    content: "";
+    background-image: url("../img/icons/edit.png");
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: 20px; }
+  button.edit:hover {
+    border: 1px solid #8fbf21; }
+  button.edit:focus {
+    outline: none; }
+
+button.add {
+  padding: 10px 30px 10px 45px;
+  height: 40px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  border: 1px solid #E8EAEB;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+  color: #342E39;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  position: relative;
+  text-transform: capitalize; }
+  button.add:before {
+    content: "";
+    background-image: url("../img/icons/add.png");
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: 20px; }
+  button.add:hover {
+    border: 1px solid #8fbf21; }
+  button.add:focus {
+    outline: none; }
+
+button.back {
+  padding: 10px 30px 10px 45px;
+  height: 40px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  border: 1px solid #E8EAEB;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+  color: #342E39;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  position: relative;
+  text-transform: capitalize; }
+  button.back:before {
+    content: "";
+    background-image: url("../img/icons/arrow-left.png");
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: 20px; }
+  button.back:hover {
+    border: 1px solid #8fbf21; }
+  button.back:focus {
+    outline: none; }
+
+button.manage {
+  padding: 10px 30px 10px 45px;
+  height: 40px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  border: 1px solid #E8EAEB;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+  color: #342E39;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  position: relative;
+  text-transform: capitalize; }
+  button.manage:before {
+    content: "";
+    background-image: url("../img/icons/arrow-right.png");
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: 20px; }
+  button.manage:hover {
+    border: 1px solid #8fbf21; }
+  button.manage:focus {
+    outline: none; }
+
 /* overview */
 #manage .page-header .address {
   color: #8fbf21; }
@@ -119,6 +256,33 @@
 table {
   margin-top: 15px;
   width: 100%; }
+
+button.edit {
+  padding: 10px 30px 10px 45px;
+  height: 40px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  border: 1px solid #E8EAEB;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+  color: #342E39;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  position: relative;
+  text-transform: capitalize; }
+  button.edit:before {
+    content: "";
+    background-image: url("../img/icons/edit.png");
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: 20px; }
+  button.edit:hover {
+    border: 1px solid #8fbf21; }
+  button.edit:focus {
+    outline: none; }
 
 .boxed-section-dashed {
   border: 1px dashed #E8EAEB;
