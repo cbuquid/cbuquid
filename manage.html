@@ -118,9 +118,9 @@ window.onload = function() {
                   <div class="col-lg-2">
                     <span class="section-header">Named Insured</span>
                   </div>
-                  <div class="col-lg-8">
+                  <div class="col-lg-8 bottom-15">
                     <span>Primary Insured:</span>
-                    <div class="value-header">Wanda Geisler</div>
+                    <div class="value-header top-15">Wanda Geisler</div>
                     <span>200 Davis St, Vacaville, CA 95687<br/>wandageisler@gmail.com<br/>555-555-5555</span>
                   </div>
                   <div class="col-lg-2">
@@ -151,7 +151,7 @@ window.onload = function() {
                 </div><!-- /row -->
                 <div class="row">
                   <div class="col-lg-12">
-                  <table>
+                  <table class="alternating-colors">
                     <tr>
                       <td>Type</td>
                       <td>Name</td>
@@ -179,18 +179,24 @@ window.onload = function() {
               <div class="additional-footer">
                 <div class="row">
                   <div class="col-lg-12">
-                    <button class="add">Additional Interest</button>
+                    <button class="add"><a href="manage-expand.html#additional-interests">Additional Interest</a></button>
                   </div><!--/col -->
                 </div><!-- /row -->
               </div>
               <!-- end of add'l footer -->
 
               <hr>
-              <a href="index.html"><button class="back">back</button></a>
-              <button class="inactive submit secondary">Submit Endorsements</button>
-              <div class="callout">
-                Swyfft does not currently support coverage endorsements through our web app.  If you’d like to make a coverage endorsement you can contact our customer service representative at 888.888.8888 to quote and process coverage endorsements.
-              </div><!-- /callout -->
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <button class="back"><a href="index.html">back</a></button>
+                  <button id="submit" class="inactive submit secondary">Submit Endorsements</button>
+                  <div id ="callout" class="boxed-section">
+                    Swyfft does not currently support coverage endorsements through our web app.  If you’d like to make a coverage endorsement you can contact our customer service representative at <a href="#">888.888.8888</a> to quote and process coverage endorsements.
+                  </div><!-- /callout -->                  
+                </div>
+              </div>
+              
 
           </section><!-- #add-endorsements -->
 
@@ -382,8 +388,13 @@ window.onload = function() {
             <!-- end of add'l footer -->
 
             <hr>
+<<<<<<< HEAD
             <a href="index.html"><button class="back">back</button></a>
             <div class="callout">
+=======
+            <a href="index.html"><button>back</button></a>
+            <div id ="callout" class="boxed-section">
+>>>>>>> master
               Swyfft does not currently support coverage endorsements through our web app.  If you’d like to make a coverage endorsement you can contact our customer service representative at 888.888.8888 to quote and process coverage endorsements.
             </div><!-- /callout -->
 
@@ -507,7 +518,7 @@ window.onload = function() {
               <div id="claims">
               <div class="row">
                 <div class="col-lg-12">
-                  <table>
+                  <table class="alternating-colors">
                     <tbody>
                       <tr id="header-row">
                         <td><span class="sort" data-sort="accDate">Acc. Date</span></td>
@@ -551,8 +562,13 @@ window.onload = function() {
             <!-- end of add'l footer -->
 
             <hr>
+<<<<<<< HEAD
             <a href="index.html"><button class="back">back</button></a>
             <div class="callout">
+=======
+            <a href="index.html"><button>back</button></a>
+            <div id ="callout" class="boxed-section">
+>>>>>>> master
               Swyfft does not currently support coverage endorsements through our web app.  If you’d like to make a coverage endorsement you can contact our customer service representative at 888.888.8888 to quote and process coverage endorsements.
             </div><!-- /callout -->
 
@@ -605,9 +621,19 @@ $('.boxed-section button').click(function(){
   window.location.href = "manage-expand.html";
 });
 
+<<<<<<< HEAD
   /* payment history table sorting */
   var options = {
     valueNames: [ 'dueDate', 'processedDate', 'status' ]
+=======
+$('button.add').click(function(){
+  window.location.href = "manage-expand.html";
+});
+
+/* post address to header */
+window.onload = function() {
+    document.getElementById('variableAddress').innerText = sessionStorage.getItem('address');
+>>>>>>> master
   };
 
   var paymentList = new List('payments', options);

@@ -1,13 +1,44 @@
+/* a and button overwrites */
+a{
+	color: $green-1;
+	text-decoration: none !important;
+	padding-bottom:2px;
+
+	&:hover{
+		color: $green-1;
+		border-bottom: 1px solid $green-1;
+		margin-bottom: -1px;
+	}
+}
+
+button a{
+	color: unset;
+
+	&:hover{
+		color: unset;
+		border-bottom: unset;
+		margin-bottom: unset;
+	}
+}
+
 /* font family */
 $lato: 'Lato', Helvetica, sans-serif;
 
 /* font sizes */
 @mixin subhead($color){
 	font-size: 12px;
-	letter-spacing: 0.3px;
+	letter-spacing: 0.5px;
 	line-height: 1.3;
 	color: $color;
 	font-weight: 700;
+}
+
+@mixin subhead-sml($color){
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	line-height: 1.5;
+	color: $color;
+	font-weight: 400;
 }
 
 @mixin body-copy($color){

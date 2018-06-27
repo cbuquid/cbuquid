@@ -51,3 +51,31 @@ $transition: all 200ms ease-in;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+<<<<<<< HEAD
+=======
+
+.alternating-colors{
+    td{
+        padding: 15px 10px;
+    }
+
+    tr:nth-child(even){
+      background-color: $gray-lightest;
+    }
+    margin-bottom: $unit-1;
+
+} 
+
+/* spacing classes */
+
+.top-15{
+    margin-top: $unit;
+}
+.bottom-15{
+    margin-bottom: $unit;
+}
+
+
+
+
+>>>>>>> master
