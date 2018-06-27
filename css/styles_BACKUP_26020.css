@@ -235,11 +235,9 @@ button.manage {
   button.manage:focus {
     outline: none; }
 
-<<<<<<< HEAD
+
 button.money {
-=======
 button.cancel {
->>>>>>> master
   padding: 10px 30px 10px 45px;
   height: 40px;
   background-color: #FFFFFF;
@@ -254,20 +252,16 @@ button.cancel {
   transition: all 200ms ease-in;
   position: relative;
   text-transform: capitalize; }
-<<<<<<< HEAD
   button.money:before {
     content: "";
     background-image: url("../img/icons/money.png");
-=======
   button.cancel:before {
     content: "";
     background-image: url("../img/icons/undo.png");
->>>>>>> master
     height: 15px;
     width: 15px;
     position: absolute;
     left: 20px; }
-<<<<<<< HEAD
   button.money:hover {
     border: 1px solid #8fbf21; }
   button.money:focus {
@@ -326,7 +320,6 @@ button.download {
     border: 1px solid #8fbf21; }
   button.download:focus {
     outline: none; }
-=======
   button.cancel:hover {
     border: 1px solid #8fbf21; }
   button.cancel:focus {
@@ -388,7 +381,6 @@ input {
     border: 1px solid #8fbf21; }
   input:hover {
     border: 1px solid #8fbf21; }
->>>>>>> master
 
 /* overview */
 #manage .page-header .address {
@@ -617,7 +609,6 @@ nav {
   #users input:focus {
     outline: none;
     border-color: #8fbf21; }
-<<<<<<< HEAD
 
 .sort {
   display: inline-block;
@@ -666,7 +657,6 @@ nav {
 
 .sort.desc, .sort.asc {
   color: #8fbf21; }
-=======
   #users .sort {
     display: inline-block;
     color: #8E8E8E;
@@ -708,6 +698,5 @@ nav {
     right: -15px; }
   #users .sort.desc, #users .sort.asc {
     color: #8fbf21; }
->>>>>>> master
 
 /* end quotes table - #users */
