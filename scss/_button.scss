@@ -1,0 +1,70 @@
+
+@mixin primary-button($icon-url: null){
+
+    @if ($icon-url){
+    	 padding: 10px 30px 10px 45px;
+
+    	 &:before{
+	        content: "";
+	        background-image: url($icon-url);
+	        height: 15px;
+	        width: 15px;
+	        position: absolute;
+	        left: 20px;
+    	}
+
+    } @else {
+		padding: 10px 30px;
+	}
+
+    height: 40px;
+    background-color: $white;
+    border-radius: 30px;
+    border: 1px solid $gray-medium;
+
+    @include body-copy($black);
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: $transition;
+    position: relative;
+    text-transform: capitalize;
+
+    &:hover{
+        border: 1px solid $green-1;
+    }
+
+    &:focus{
+        outline: none;
+    }
+}
+
+button.secondary{
+	background-color: $green-1;
+	color: $white;
+	border: none;
+
+	&:hover{
+		background-color: $black;
+		border: none;
+	}
+}
+
+button{
+	@include primary-button;
+}
+
+button.edit{
+    @include primary-button("../img/icons/edit.png");
+}
+
+button.add{
+    @include primary-button("../img/icons/add.png");
+}
+
+button.back{
+    @include primary-button("../img/icons/arrow-left.png");
+}
+
+button.manage{
+    @include primary-button("../img/icons/arrow-right.png");
+}
