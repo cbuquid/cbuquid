@@ -54,3 +54,7 @@
 		margin-top: $unit;
 		width: 100%;
 	}
+
+button.edit{
+    @include primary-button("../img/icons/edit.png");
+}
