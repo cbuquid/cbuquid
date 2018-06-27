@@ -41,20 +41,30 @@
 	text-align: left;
 }
 
-	.boxed-section{
-		@include section-box; /* defined in _var.scss */
-	}
-
-	/* date */
-	.cal-icon{
-		margin: -10px 10px 0 0;
-	}
-
-	table{
-		margin-top: $unit;
-		width: 100%;
-	}
-
-button.edit{
-    @include primary-button("../img/icons/edit.png");
+.boxed-section{
+	@include section-box; /* defined in _var.scss */
 }
+
+/* date */
+.cal-icon{
+	margin: -10px 10px 0 0;
+}
+
+table{
+	margin-top: $unit;
+	width: 100%;
+}
+
+#submit{
+	position: absolute;
+	right: 15px;
+}
+
+#callout{
+	margin-top: $unit;
+	padding: $unit 80px;
+	text-align: center;
+	@include subhead-sml($black);
+
+}
+
