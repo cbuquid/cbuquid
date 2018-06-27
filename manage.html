@@ -614,16 +614,14 @@ $('.boxed-section button').click(function(){
   window.location.href = "manage-expand.html";
 });
 
-  /* payment history table sorting */
-  var options = {
-    valueNames: [ 'dueDate', 'processedDate', 'status' ]
+/* add button open new page */
 $('button.add').click(function(){
   window.location.href = "manage-expand.html";
 });
 
-/* post address to header */
-window.onload = function() {
-    document.getElementById('variableAddress').innerText = sessionStorage.getItem('address');
+  /* payment history table sorting */
+  var options = {
+    valueNames: [ 'dueDate', 'processedDate', 'status' ]
   };
 
   var paymentList = new List('payments', options);

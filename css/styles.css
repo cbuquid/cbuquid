@@ -235,11 +235,7 @@ button.manage {
   button.manage:focus {
     outline: none; }
 
-<<<<<<< HEAD
 button.money {
-=======
-button.cancel {
->>>>>>> master
   padding: 10px 30px 10px 45px;
   height: 40px;
   background-color: #FFFFFF;
@@ -254,20 +250,13 @@ button.cancel {
   transition: all 200ms ease-in;
   position: relative;
   text-transform: capitalize; }
-<<<<<<< HEAD
   button.money:before {
     content: "";
     background-image: url("../img/icons/money.png");
-=======
-  button.cancel:before {
-    content: "";
-    background-image: url("../img/icons/undo.png");
->>>>>>> master
     height: 15px;
     width: 15px;
     position: absolute;
     left: 20px; }
-<<<<<<< HEAD
   button.money:hover {
     border: 1px solid #8fbf21; }
   button.money:focus {
@@ -326,7 +315,29 @@ button.download {
     border: 1px solid #8fbf21; }
   button.download:focus {
     outline: none; }
-=======
+
+button.cancel {
+  padding: 10px 30px 10px 45px;
+  height: 40px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  border: 1px solid #E8EAEB;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+  color: #342E39;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  position: relative;
+  text-transform: capitalize; }
+  button.cancel:before {
+    content: "";
+    background-image: url("../img/icons/undo.png");
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: 20px; }
   button.cancel:hover {
     border: 1px solid #8fbf21; }
   button.cancel:focus {
@@ -388,7 +399,6 @@ input {
     border: 1px solid #8fbf21; }
   input:hover {
     border: 1px solid #8fbf21; }
->>>>>>> master
 
 /* overview */
 #manage .page-header .address {
@@ -617,7 +627,6 @@ nav {
   #users input:focus {
     outline: none;
     border-color: #8fbf21; }
-<<<<<<< HEAD
 
 .sort {
   display: inline-block;
@@ -626,7 +635,7 @@ nav {
   height: 30px;
   position: relative;
   font-size: 12px;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.5px;
   line-height: 1.3;
   color: #342E39;
   font-weight: 700;
@@ -666,48 +675,5 @@ nav {
 
 .sort.desc, .sort.asc {
   color: #8fbf21; }
-=======
-  #users .sort {
-    display: inline-block;
-    color: #8E8E8E;
-    text-decoration: none;
-    height: 30px;
-    position: relative;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    line-height: 1.3;
-    color: #342E39;
-    font-weight: 700;
-    /* defined in _fonts.scss */ }
-  #users .sort:hover {
-    text-decoration: none; }
-  #users .sort:focus {
-    outline: none; }
-  #users .sort.asc:after, #users .sort:after {
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid #8E8E8E;
-    content: "";
-    position: absolute;
-    top: 5px;
-    right: -15px; }
-  #users .sort.asc:after {
-    border-top: 5px solid #8fbf21; }
-  #users .sort.desc:after {
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid #8fbf21;
-    border-top: none !important;
-    content: "";
-    position: absolute;
-    top: 5px;
-    right: -15px; }
-  #users .sort.desc, #users .sort.asc {
-    color: #8fbf21; }
->>>>>>> master
 
 /* end quotes table - #users */
