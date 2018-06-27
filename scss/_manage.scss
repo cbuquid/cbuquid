@@ -6,7 +6,7 @@
 
 	#second-nav{
 		width: 97%;
-		margin: $unit-1 auto;
+		margin: $unit-2 auto;
 		.selection{
 			@include tab-header($gray-medium);
 			width: 33%;
@@ -54,4 +54,3 @@
 		margin-top: $unit;
 		width: 100%;
 	}
-}

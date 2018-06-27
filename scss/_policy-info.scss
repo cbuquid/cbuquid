@@ -1,0 +1,30 @@
+.boxed-section-dashed{
+  @include section-box-dashed; /* defined in _var.scss */
+}
+
+.overview-data {
+  margin-top: $unit;
+  margin-bottom: $unit;
+  padding-right: 25px;
+  padding-left: 10px;
+}
+
+.overview-wrapper {
+  margin: 0 auto;
+}
+
+.label {
+  @include body-copy($gray-dark)
+}
+
+.contact {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3;
+  padding-right: $unit-1;
+}
+
+.contact-label {
+  @include body-copy($gray-dark)
+  padding-right: $unit-1;
+}
