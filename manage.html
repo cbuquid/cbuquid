@@ -60,7 +60,7 @@
         </ul>
 
         <div class="col-lg-10 main">
-          <span class="page-header">You are managing <span class="address">[Variable Address]</span></span>
+          <span class="page-header">You are managing <span id="variableAddress"class="address">[Variable Address]</span></span>
 
           <section id="second-nav">
             <div class="row">
@@ -187,7 +187,194 @@
           </section><!-- #add-endorsements -->
 
           <section id="payment-history">
-            Payment history section
+
+            <!-- payment overivew box -->
+            <div class="boxed-section-dashed">
+              <div class="row">
+                <div class="col-lg-8">
+                  <span class="section-header">Next Payment Due</span>
+                </div>
+                <div class="col-lg-4">
+                  <span class="section-header">Account Status</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="overview-data">
+                        <div class="label">Due Date:</div>
+                        <div class="value-header">6/28/18</div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="overview-data">
+                        <div class="label">Amount Due:</div>
+                        <div class="value-header">$37.50</div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="overview-data">
+                        <div class="label">Amount Due:</div>
+                        <div class="value-header">$262.50</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="overview-data">
+                        <div class="label">Payment Type</div>
+                        <div class="value-header">Monthly Credit Card Payments</div>
+                        <div class="label">Change Payment Type</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="value-header">
+                    Warning
+                  </div>
+                  <div class="label">
+                    The payment due 5/28/18 did not process because of <span>Expired Card</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of payment overview box -->
+
+            <div id="dashed" class="additional-footer">
+              <div class="row">
+                <div class="col-lg-12">
+                  <button>Make a Payment</button>
+                </div><!--/col -->
+              </div><!-- /row -->
+            </div>
+            <!-- end of add'l footer -->
+
+            <!-- payment history box -->
+            <div class="boxed-section">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="section-header">
+                    Payment History
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>Due Date</td>
+                        <td>Processed</td>
+                        <td>$ Due</td>
+                        <td>Payment Method</td>
+                        <td>Status</td>
+                        <td>Balance</td>
+                      </tr>
+                      <tr>
+                        <td>5/28/18</td>
+                        <td>Error</td>
+                        <td>$37.50</td>
+                        <td>Monthly Credit Card</td>
+                        <td>Expired Card</td>
+                        <td>$262.50</td>
+                      </tr>
+                      <tr>
+                        <td>4/28/18</td>
+                        <td>4/28/18</td>
+                        <td>$37.50</td>
+                        <td>Monthly Credit Card</td>
+                        <td>Invalid Card Number</td>
+                        <td>$262.50</td>
+                      </tr>
+                      <tr>
+                        <td>3/28/18</td>
+                        <td>3/28/18</td>
+                        <td>$37.50</td>
+                        <td>Monthly Credit Card</td>
+                        <td>Approved</td>
+                        <td>$300.00</td>
+                      </tr>
+                      <tr>
+                        <td>2/28/18</td>
+                        <td>2/28/18</td>
+                        <td>$37.50</td>
+                        <td>Monthly Credit Card</td>
+                        <td>Approved</td>
+                        <td>$337.50</td>
+                      </tr>
+                      <tr>
+                        <td>1/28/18</td>
+                        <td>1/28/18</td>
+                        <td>$37.50</td>
+                        <td>Monthly Credit Card</td>
+                        <td>No Card Record</td>
+                        <td>$375.00</td>
+                      </tr>
+                      <tr>
+                        <td>12/28/17</td>
+                        <td>12/28/17</td>
+                        <td>$37.50</td>
+                        <td>Monthly Credit Card</td>
+                        <td>Approved</td>
+                        <td>$412.50</td>
+                      </tr>
+                      <tr>
+                        <td>11/28/17</td>
+                        <td>11/28/17</td>
+                        <td>$450.00</td>
+                        <td>Monthly Credit Card</td>
+                        <td>Approved</td>
+                        <td>$0</td>
+                      </tr>
+                      <tr>
+                        <td>10/28/17</td>
+                        <td>10/28/17</td>
+                        <td>$37.50</td>
+                        <td>Monthly Echeck</td>
+                        <td>Approved</td>
+                        <td>$412.50</td>
+                      </tr>
+                      <tr>
+                        <td>9/28/17</td>
+                        <td>Error</td>
+                        <td>$450.00</td>
+                        <td>Annual Credit Card</td>
+                        <td>Expired Card</td>
+                        <td>$450.00</td>
+                      </tr>
+                      <tr>
+                        <td>8/28/17</td>
+                        <td>8/28/17</td>
+                        <td>$37.50</td>
+                        <td>Annual Echeck</td>
+                        <td>Pending</td>
+                        <td>$412.50</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- end of payment history box -->
+
+            <div class="additional-footer">
+              <div class="row">
+                <div class="col-lg-12">
+                  <button>Load More</button>
+                  <button>Account Invoice</button>
+                </div><!--/col -->
+              </div><!-- /row -->
+            </div>
+            <!-- end of add'l footer -->
+
+            <hr>
+            <a href="index.html"><button>back</button></a>
+            <div class="callout">
+              Swyfft does not currently support coverage endorsements through our web app.  If you’d like to make a coverage endorsement you can contact our customer service representative at 888.888.8888 to quote and process coverage endorsements.
+            </div><!-- /callout -->
+
           </section><!-- #payment-history -->
 
           <section id="policy-info">
@@ -259,6 +446,96 @@
             </div>
             <!-- end of add'l footer -->
 
+            <!-- endorsement history box -->
+            <div class="boxed-section">
+              <div class="row">
+                <div class="col-lg-12">
+                  <span class="section-header">Endorsement History</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>Date Added</td>
+                        <td>Effective Date</td>
+                        <td>Status</td>
+                      </tr>
+                      <tr>
+                        <td>5/28/18</td>
+                        <td>5/31/18</td>
+                        <td>Added to policy</td>
+                        <td><button>Donwload Dec Page</button></td>
+                      </tr>
+                      <tr>
+                        <td>1/15/18</td>
+                        <td>1/17/18</td>
+                        <td>Added to policy</td>
+                        <td><button>Donwload Dec Page</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- end of endorsement history box -->
+
+            <!-- claims history box -->
+            <div class="boxed-section">
+              <div class="row">
+                <div class="col-lg-12">
+                  <span class="section-header">Claims History</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>Acc. Date</td>
+                        <td>Claim #</td>
+                        <td>Status</td>
+                        <td>Loss Incurred</td>
+                        <td>Description</td>
+                      </tr>
+                      <tr>
+                        <td>5/28/18</td>
+                        <td>HMCB18010001-3</td>
+                        <td>Open</td>
+                        <td>$5,538.29</td>
+                        <td>Ceiling in living room, furniture, wood floors damaged, due to pipe bursting.</td>
+                      </tr>
+                      <tr>
+                        <td>1/18/18</td>
+                        <td>HMCB10010090-1</td>
+                        <td>Closed</td>
+                        <td>$25,300.00</td>
+                        <td>Part of house burned due to electrical fire.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- end of claims history box -->
+
+            <div class="additional-footer">
+              <div class="row">
+                <div class="col-lg-12">
+                  <button>New Claim</button>
+                  <button>Download Loss Run</button>
+                </div><!--/col -->
+              </div><!-- /row -->
+            </div>
+            <!-- end of add'l footer -->
+
+            <hr>
+            <a href="index.html"><button>back</button></a>
+            <div class="callout">
+              Swyfft does not currently support coverage endorsements through our web app.  If you’d like to make a coverage endorsement you can contact our customer service representative at 888.888.8888 to quote and process coverage endorsements.
+            </div><!-- /callout -->
+
           </section><!-- #policy-info -->
 
         </div><!-- /col -->
@@ -307,6 +584,11 @@ $('#policy').click(function(){
 $('.boxed-section button').click(function(){
   window.location.href = "manage-expand.html";
 });
+
+/* post address to header */
+window.onload = function() {
+    document.getElementById('variableAddress').innerText = sessionStorage.getItem('address');
+  };
 
 </script>
 

@@ -41,7 +41,7 @@
             <li><img src="img/wordmark-logo.png"></li>
 
           </ul>
-          
+
         </div><!-- /.col -->
       </div><!-- /.row -->
     </div><!-- /.container -->
@@ -92,7 +92,7 @@
               <tr>
                 <td class="updated">5/18/18</td>
                 <td class="type">Quote</td>
-                <td class="address">40 Cricked Ln</td>
+                <td id="address" class="address">40 Cricked Ln</td>
                 <td class="state">MA</td>
                 <td class="name">Jonny Stromberg</td>
                 <td class="premium">$1,250</td>
@@ -154,7 +154,8 @@
                 <td class="status">Cancelled</td>
                 <td class="expires">4/16/19</td>
                 <td><button class="manage">Manage</button></td>
-              </tr>  
+              </tr>
+
               <tr>
                 <td class="updated">4/15/18</td>
                 <td class="type">Quote</td>
@@ -165,7 +166,8 @@
                 <td class="status">&nbsp;</td>
                 <td class="expires">&nbsp;</td>
                 <td><button class="manage">Manage</button></td>
-              </tr>  
+              </tr>
+
               <tr>
                 <td class="updated">1/31/18</td>
                 <td class="type">Quote</td>
@@ -176,7 +178,8 @@
                 <td class="status">&nbsp;</td>
                 <td class="expires">&nbsp;</td>
                 <td><button class="manage">Manage</button></td>
-              </tr>  
+              </tr>
+
               <tr>
                 <td class="updated">3/28/18</td>
                 <td class="type">Policy</td>
@@ -187,7 +190,8 @@
                 <td class="status">Bound</td>
                 <td class="expires">3/28/19</td>
                 <td><button class="manage">Manage</button></td>
-              </tr> 
+              </tr>
+
               <tr>
                 <td class="updated">4/5/18</td>
                 <td class="type">Policy</td>
@@ -198,7 +202,8 @@
                 <td class="status">Bound</td>
                 <td class="expires">4/5/19</td>
                 <td><button class="manage">Manage</button></td>
-              </tr> 
+              </tr>
+
               <tr>
                 <td class="updated">6/22/18</td>
                 <td class="type">Policy</td>
@@ -209,7 +214,8 @@
                 <td class="status">Bound</td>
                 <td class="expires">6/22/19</td>
                 <td><button class="manage">Manage</button></td>
-              </tr> 
+              </tr>
+
               <tr>
                 <td class="updated">6/13/18</td>
                 <td class="type">Policy</td>
@@ -219,8 +225,9 @@
                 <td class="premium">$1,400</td>
                 <td class="status">Bound</td>
                 <td class="expires">6/13/19</td>
+
                 <td><button class="manage">Manage</button></td>
-              </tr>                                
+              </tr>
             </tbody>
           </table>
 
@@ -253,7 +260,7 @@ $( "#policy-click" ).click(function() {
 });
 
 $( "#quote-click" ).click(function() {
-  
+
     userList.filter(function(item) {
       return (item.values().type == "Quote");
     });
@@ -261,7 +268,7 @@ $( "#quote-click" ).click(function() {
 });
 
 $( "#all-click" ).click(function() {
-  
+
     userList.filter();
 
 });
@@ -270,6 +277,12 @@ $( "#all-click" ).click(function() {
 $(".list button").click(function(){
   window.open("manage.html");
 });
+
+/* grab address */
+$(".list button").click(function propertyaddress(){
+    var address = document.getElementById('address').value;
+    sessionStorage.setItem('address', address);
+  });
 
 </script>
 

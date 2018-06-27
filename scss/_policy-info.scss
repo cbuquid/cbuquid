@@ -28,3 +28,8 @@
   @include body-copy($gray-dark)
   padding-right: $unit-1;
 }
+
+#dashed {
+  border: 1px dashed $gray-medium;
+  margin: -26px 0 $unit 0;
+}

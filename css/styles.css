@@ -319,6 +319,10 @@ button.edit {
   color: #555555;
   padding-right: 25px; }
 
+#dashed {
+  border: 1px dashed #E8EAEB;
+  margin: -26px 0 15px 0; }
+
 /* UNIVERSAL */
 html,
 body {
