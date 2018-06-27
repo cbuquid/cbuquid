@@ -69,6 +69,19 @@ button.manage{
     @include primary-button("../img/icons/arrow-right.png");
 }
 
+<<<<<<< HEAD
+button.money{
+  @include primary-button("../img/icons/money.png")
+}
+
+button.chevron{
+  @include primary-button("../img/icons/chevron.png")
+}
+
+button.download{
+  @include primary-button("../img/icons/download.png")
+}
+=======
 button.cancel{
     @include primary-button("../img/icons/undo.png");
 }
@@ -144,3 +157,4 @@ input{
         border: 1px solid $green-1;
     }    
 }
+>>>>>>> master

@@ -92,7 +92,7 @@
               <tr>
                 <td class="updated">5/18/18</td>
                 <td class="type">Quote</td>
-                <td id="address" class="address">40 Cricked Ln</td>
+                <td class="address">40 Cricked Ln</td>
                 <td class="state">MA</td>
                 <td class="name">Jonny Stromberg</td>
                 <td class="premium">$1,250</td>
@@ -273,16 +273,19 @@ $( "#all-click" ).click(function() {
 
 });
 
+/* grab address */
+$(".list button").click( function(){
+  var address = $(this).closest("tr").find('td:nth(2)').text();
+  sessionStorage.setItem('address', address);
+
+});
+
 /* click to take you to manage */
 $(".list button").click(function(){
   window.open("manage.html");
 });
 
-/* grab address */
-$(".list button").click(function propertyaddress(){
-    var address = document.getElementById('address').value;
-    sessionStorage.setItem('address', address);
-  });
+
 
 </script>
 

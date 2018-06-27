@@ -20,37 +20,6 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px; }
 
-.alternating-colors {
-  margin-bottom: 25px; }
-  .alternating-colors td {
-    padding: 15px 10px; }
-  .alternating-colors tr:nth-child(even) {
-    background-color: #F2F4F5; }
-
-/* spacing classes */
-.top-15 {
-  margin-top: 15px; }
-
-.bottom-15 {
-  margin-bottom: 15px; }
-
-/* a and button overwrites */
-a {
-  color: #8fbf21;
-  text-decoration: none !important;
-  padding-bottom: 2px; }
-  a:hover {
-    color: #8fbf21;
-    border-bottom: 1px solid #8fbf21;
-    margin-bottom: -1px; }
-
-button a {
-  color: unset; }
-  button a:hover {
-    color: unset;
-    border-bottom: unset;
-    margin-bottom: unset; }
-
 /* font family */
 /* font sizes */
 /* standard classes */
@@ -82,7 +51,7 @@ button a {
 
 .subhead {
   font-size: 12px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   line-height: 1.3;
   color: #342E39;
   font-weight: 700; }
@@ -235,11 +204,7 @@ button.manage {
   button.manage:focus {
     outline: none; }
 
-<<<<<<< HEAD
 button.money {
-=======
-button.cancel {
->>>>>>> master
   padding: 10px 30px 10px 45px;
   height: 40px;
   background-color: #FFFFFF;
@@ -254,20 +219,13 @@ button.cancel {
   transition: all 200ms ease-in;
   position: relative;
   text-transform: capitalize; }
-<<<<<<< HEAD
   button.money:before {
     content: "";
     background-image: url("../img/icons/money.png");
-=======
-  button.cancel:before {
-    content: "";
-    background-image: url("../img/icons/undo.png");
->>>>>>> master
     height: 15px;
     width: 15px;
     position: absolute;
     left: 20px; }
-<<<<<<< HEAD
   button.money:hover {
     border: 1px solid #8fbf21; }
   button.money:focus {
@@ -326,69 +284,6 @@ button.download {
     border: 1px solid #8fbf21; }
   button.download:focus {
     outline: none; }
-=======
-  button.cancel:hover {
-    border: 1px solid #8fbf21; }
-  button.cancel:focus {
-    outline: none; }
-
-/* input styles */
-.tab-radio {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  height: 40px; }
-  .tab-radio li {
-    float: left;
-    margin: 0 15px 0 0;
-    min-width: 150px;
-    height: 40px;
-    position: relative;
-    text-align: center;
-    font-size: 14px;
-    letter-spacing: 0.3px;
-    line-height: 1.3;
-    color: #555555; }
-  .tab-radio label, .tab-radio input {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; }
-  .tab-radio input[type="radio"] {
-    opacity: 0;
-    z-index: 100; }
-  .tab-radio input[type="radio"]:checked + label,
-  .tab-radio .Checked + label {
-    background: #8fbf21;
-    color: #FFFFFF !important; }
-  .tab-radio label {
-    background-color: #F2F4F5;
-    cursor: pointer;
-    z-index: 90;
-    border-radius: 30px;
-    line-height: 40px;
-    height: 40px;
-    transition: all 200ms ease-in; }
-  .tab-radio label:hover {
-    background: #E8EAEB; }
-
-input {
-  border-radius: 30px;
-  height: 40px;
-  border: 1px solid #E8EAEB;
-  cursor: pointer;
-  padding: 0 25px;
-  display: block;
-  width: 100%;
-  transition: all 200ms ease-in; }
-  input:focus {
-    outline: none;
-    border: 1px solid #8fbf21; }
-  input:hover {
-    border: 1px solid #8fbf21; }
->>>>>>> master
 
 /* overview */
 #manage .page-header .address {
@@ -443,25 +338,32 @@ table {
   margin-top: 15px;
   width: 100%; }
 
-#submit {
-  position: absolute;
-  right: 15px; }
-
-#callout {
-  margin-top: 15px;
-  padding: 15px 80px;
-  text-align: center;
-  font-size: 12px;
-  letter-spacing: 0.5px;
-  line-height: 1.5;
+button.edit {
+  padding: 10px 30px 10px 45px;
+  height: 40px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  border: 1px solid #E8EAEB;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
   color: #342E39;
-  font-weight: 400; }
-
-.internal-section {
-  margin-bottom: 40px; }
-
-.inline-icon {
-  margin: 0 0 5px 10px; }
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  position: relative;
+  text-transform: capitalize; }
+  button.edit:before {
+    content: "";
+    background-image: url("../img/icons/edit.png");
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: 20px; }
+  button.edit:hover {
+    border: 1px solid #8fbf21; }
+  button.edit:focus {
+    outline: none; }
 
 .boxed-section-dashed {
   border: 1px dashed #E8EAEB;
@@ -617,7 +519,6 @@ nav {
   #users input:focus {
     outline: none;
     border-color: #8fbf21; }
-<<<<<<< HEAD
 
 .sort {
   display: inline-block;
@@ -666,48 +567,5 @@ nav {
 
 .sort.desc, .sort.asc {
   color: #8fbf21; }
-=======
-  #users .sort {
-    display: inline-block;
-    color: #8E8E8E;
-    text-decoration: none;
-    height: 30px;
-    position: relative;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    line-height: 1.3;
-    color: #342E39;
-    font-weight: 700;
-    /* defined in _fonts.scss */ }
-  #users .sort:hover {
-    text-decoration: none; }
-  #users .sort:focus {
-    outline: none; }
-  #users .sort.asc:after, #users .sort:after {
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid #8E8E8E;
-    content: "";
-    position: absolute;
-    top: 5px;
-    right: -15px; }
-  #users .sort.asc:after {
-    border-top: 5px solid #8fbf21; }
-  #users .sort.desc:after {
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid #8fbf21;
-    border-top: none !important;
-    content: "";
-    position: absolute;
-    top: 5px;
-    right: -15px; }
-  #users .sort.desc, #users .sort.asc {
-    color: #8fbf21; }
->>>>>>> master
 
 /* end quotes table - #users */
