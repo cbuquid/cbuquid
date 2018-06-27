@@ -179,8 +179,8 @@
 
               <hr>
               <a href="index.html"><button class="back">back</button></a>
-              <button class="inactive submit secondary">Submit Endorsements</button>
-              <div class="callout">
+              <button id="submit" class="inactive submit secondary">Submit Endorsements</button>
+              <div id ="callout" class="boxed-section">
                 Swyfft does not currently support coverage endorsements through our web app.  If you’d like to make a coverage endorsement you can contact our customer service representative at 888.888.8888 to quote and process coverage endorsements.
               </div><!-- /callout -->
 
@@ -371,7 +371,7 @@
 
             <hr>
             <a href="index.html"><button>back</button></a>
-            <div class="callout">
+            <div id ="callout" class="boxed-section">
               Swyfft does not currently support coverage endorsements through our web app.  If you’d like to make a coverage endorsement you can contact our customer service representative at 888.888.8888 to quote and process coverage endorsements.
             </div><!-- /callout -->
 
@@ -455,7 +455,7 @@
               </div>
               <div class="row">
                 <div class="col-lg-12">
-                  <table>
+                  <table class="alternating-colors">
                     <tbody>
                       <tr>
                         <td>Date Added</td>
@@ -490,7 +490,7 @@
               </div>
               <div class="row">
                 <div class="col-lg-12">
-                  <table>
+                  <table class="alternating-colors">
                     <tbody>
                       <tr>
                         <td>Acc. Date</td>
@@ -532,7 +532,7 @@
 
             <hr>
             <a href="index.html"><button>back</button></a>
-            <div class="callout">
+            <div id ="callout" class="boxed-section">
               Swyfft does not currently support coverage endorsements through our web app.  If you’d like to make a coverage endorsement you can contact our customer service representative at 888.888.8888 to quote and process coverage endorsements.
             </div><!-- /callout -->
 
@@ -582,6 +582,10 @@ $('#policy').click(function(){
 /* edit button open new page */
 
 $('.boxed-section button').click(function(){
+  window.location.href = "manage-expand.html";
+});
+
+$('button.add').click(function(){
   window.location.href = "manage-expand.html";
 });
 

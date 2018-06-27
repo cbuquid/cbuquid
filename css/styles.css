@@ -51,7 +51,7 @@
 
 .subhead {
   font-size: 12px;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.5px;
   line-height: 1.3;
   color: #342E39;
   font-weight: 700; }
@@ -257,32 +257,25 @@ table {
   margin-top: 15px;
   width: 100%; }
 
-button.edit {
-  padding: 10px 30px 10px 45px;
-  height: 40px;
-  background-color: #FFFFFF;
-  border-radius: 30px;
-  border: 1px solid #E8EAEB;
-  font-size: 14px;
-  letter-spacing: 0.3px;
-  line-height: 1.3;
+#submit {
+  position: absolute;
+  right: 0; }
+
+#callout {
+  margin-top: 15px;
+  padding: 15px 80px;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
   color: #342E39;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 200ms ease-in;
-  position: relative;
-  text-transform: capitalize; }
-  button.edit:before {
-    content: "";
-    background-image: url("../img/icons/edit.png");
-    height: 15px;
-    width: 15px;
-    position: absolute;
-    left: 20px; }
-  button.edit:hover {
-    border: 1px solid #8fbf21; }
-  button.edit:focus {
-    outline: none; }
+  font-weight: 400; }
+
+.alternating-colors td {
+  padding: 15px 10px; }
+
+.alternating-colors tr:nth-child(odd) {
+  background-color: #F2F4F5; }
 
 .boxed-section-dashed {
   border: 1px dashed #E8EAEB;
@@ -419,7 +412,7 @@ nav {
     height: 30px;
     position: relative;
     font-size: 12px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.5px;
     line-height: 1.3;
     color: #342E39;
     font-weight: 700;
