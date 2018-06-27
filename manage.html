@@ -29,6 +29,14 @@
   <!-- page javascript -->
   <script src="js/proto.js"></script>
 
+<script>
+/* post address to header */
+window.onload = function() {
+    document.getElementById('variableAddress').innerText = sessionStorage.getItem('address');
+  };
+</script>
+
+
 </head>
 
 <body id="manage">
@@ -245,7 +253,7 @@
             <div id="dashed" class="additional-footer">
               <div class="row">
                 <div class="col-lg-12">
-                  <button>Make a Payment</button>
+                  <button class="money">Make a Payment</button>
                 </div><!--/col -->
               </div><!-- /row -->
             </div>
@@ -260,96 +268,99 @@
                   </div>
                 </div>
               </div>
+              <div id="payments">
               <div class="row">
                 <div class="col-lg-12">
                   <table>
                     <tbody>
-                      <tr>
-                        <td>Due Date</td>
-                        <td>Processed</td>
-                        <td>$ Due</td>
-                        <td>Payment Method</td>
-                        <td>Status</td>
-                        <td>Balance</td>
+                      <tr id="header-row">
+                        <td><span class="sort" data-sort="dueDate">Due Date</span></td>
+                        <td><span class="sort" data-sort="processedDate">Processed</span></td>
+                        <td><span class="sort">$ Due</span></td>
+                        <td><span class="sort">Payment Method</span></td>
+                        <td><span class="sort" data-sort="status">Status</span></td>
+                        <td><span class="sort">Balance</span></td>
                       </tr>
+                    </tbody>
+                    <tbody class="list">
                       <tr>
-                        <td>5/28/18</td>
-                        <td>Error</td>
+                        <td class="dueDate">5/28/18</td>
+                        <td class="processedDate">Error</td>
                         <td>$37.50</td>
                         <td>Monthly Credit Card</td>
-                        <td>Expired Card</td>
+                        <td class="status">Expired Card</td>
                         <td>$262.50</td>
                       </tr>
                       <tr>
-                        <td>4/28/18</td>
-                        <td>4/28/18</td>
+                        <td class="dueDate">4/28/18</td>
+                        <td class="processedDate">4/28/18</td>
                         <td>$37.50</td>
                         <td>Monthly Credit Card</td>
-                        <td>Invalid Card Number</td>
+                        <td class="status">Invalid Card Number</td>
                         <td>$262.50</td>
                       </tr>
                       <tr>
-                        <td>3/28/18</td>
-                        <td>3/28/18</td>
+                        <td class="dueDate">3/28/18</td>
+                        <td class="processedDate">3/28/18</td>
                         <td>$37.50</td>
                         <td>Monthly Credit Card</td>
-                        <td>Approved</td>
+                        <td class="status">Approved</td>
                         <td>$300.00</td>
                       </tr>
                       <tr>
-                        <td>2/28/18</td>
-                        <td>2/28/18</td>
+                        <td class="dueDate">2/28/18</td>
+                        <td class="processedDate">2/28/18</td>
                         <td>$37.50</td>
                         <td>Monthly Credit Card</td>
-                        <td>Approved</td>
+                        <td class="status">Approved</td>
                         <td>$337.50</td>
                       </tr>
                       <tr>
-                        <td>1/28/18</td>
-                        <td>1/28/18</td>
+                        <td class="dueDate">1/28/18</td>
+                        <td class="processedDate">1/28/18</td>
                         <td>$37.50</td>
                         <td>Monthly Credit Card</td>
-                        <td>No Card Record</td>
+                        <td class="status">No Card Record</td>
                         <td>$375.00</td>
                       </tr>
                       <tr>
-                        <td>12/28/17</td>
-                        <td>12/28/17</td>
+                        <td class="dueDate">12/28/17</td>
+                        <td class="processedDate">12/28/17</td>
                         <td>$37.50</td>
                         <td>Monthly Credit Card</td>
-                        <td>Approved</td>
+                        <td class="status">Approved</td>
                         <td>$412.50</td>
                       </tr>
                       <tr>
-                        <td>11/28/17</td>
-                        <td>11/28/17</td>
+                        <td class="dueDate">11/28/17</td>
+                        <td class="processedDate">11/28/17</td>
                         <td>$450.00</td>
                         <td>Monthly Credit Card</td>
-                        <td>Approved</td>
+                        <td class="status">Approved</td>
                         <td>$0</td>
                       </tr>
                       <tr>
-                        <td>10/28/17</td>
-                        <td>10/28/17</td>
+                        <td class="dueDate">10/28/17</td>
+                        <td class="processedDate">10/28/17</td>
                         <td>$37.50</td>
                         <td>Monthly Echeck</td>
-                        <td>Approved</td>
+                        <td class="status">Approved</td>
                         <td>$412.50</td>
                       </tr>
                       <tr>
-                        <td>9/28/17</td>
-                        <td>Error</td>
+                        <td class="dueDate">9/28/17</td>
+                        <td class="processedDate">Error</td>
                         <td>$450.00</td>
                         <td>Annual Credit Card</td>
-                        <td>Expired Card</td>
+                        <td class="status">Expired Card</td>
                         <td>$450.00</td>
                       </tr>
                       <tr>
-                        <td>8/28/17</td>
-                        <td>8/28/17</td>
+                        <td class="dueDate">8/28/17</td>
+                        <td class="processedDate">8/28/17</td>
                         <td>$37.50</td>
                         <td>Annual Echeck</td>
-                        <td>Pending</td>
+                        <td class="status">Pending</td>
                         <td>$412.50</td>
                       </tr>
                     </tbody>
@@ -357,20 +368,21 @@
                 </div>
               </div>
             </div>
+            </div>
             <!-- end of payment history box -->
 
             <div class="additional-footer">
               <div class="row">
                 <div class="col-lg-12">
-                  <button>Load More</button>
-                  <button>Account Invoice</button>
+                  <button class="chevron">Load More</button>
+                  <button class="download">Account Invoice</button>
                 </div><!--/col -->
               </div><!-- /row -->
             </div>
             <!-- end of add'l footer -->
 
             <hr>
-            <a href="index.html"><button>back</button></a>
+            <a href="index.html"><button class="back">back</button></a>
             <div class="callout">
               Swyfft does not currently support coverage endorsements through our web app.  If you’d like to make a coverage endorsement you can contact our customer service representative at 888.888.8888 to quote and process coverage endorsements.
             </div><!-- /callout -->
@@ -421,14 +433,14 @@
 
                   <div class="col-lg-4">
                         <div class="overview-data">
-                          <div class="label">Documents</div>
-                          <div><button>Download Policy PDF</button></div>
+                          <div class="label">Documents:</div>
+                          <div><button class="download">Policy PDF</button></div>
                         </div>
                         <div class="overview-data">
-                          <div><button>Download Inspection</button></div>
+                          <div><button class="download">Inspection</button></div>
                         </div>
                         <div class="overview-data">
-                          <div><button>Download Account Invoice</button></div>
+                          <div><button class="download">Account Invoice</button></div>
                         </div>
                   </div>
 
@@ -440,7 +452,7 @@
             <div class="overview-footer">
               <div class="row">
                 <div class="col-lg-12">
-                  <span class="contact-label">Contact Insured:</span><span class="value-header contact">555-555-555</span><span class="value-header contact">wandageiseler@gmail.com</span>
+                  <span class="contact-label">Contact Insured:</span><span class="phone">555-555-555</span><span class="email">wandageiseler@gmail.com</span>
                 </div><!--/col -->
               </div><!-- /row -->
             </div>
@@ -453,31 +465,35 @@
                   <span class="section-header">Endorsement History</span>
                 </div>
               </div>
+              <div id="endorsements">
               <div class="row">
                 <div class="col-lg-12">
                   <table>
                     <tbody>
+                      <tr id="header-row">
+                        <td><span class="sort" data-sort="dateAdded">Date Added</span></td>
+                        <td><span class="sort" data-sort="effectiveDate">Effective Date</span></td>
+                        <td><span class="sort" data-sort="status">Status</span></td>
+                      </tr>
+                    </tbody>
+                    <tbody class="list">
                       <tr>
-                        <td>Date Added</td>
-                        <td>Effective Date</td>
-                        <td>Status</td>
+                        <td class="dateAdded">5/28/18</td>
+                        <td class="effectiveDate">5/31/18</td>
+                        <td class="status">Added to policy</td>
+                        <td><button class="download">Dec Page</button></td>
                       </tr>
                       <tr>
-                        <td>5/28/18</td>
-                        <td>5/31/18</td>
-                        <td>Added to policy</td>
-                        <td><button>Donwload Dec Page</button></td>
-                      </tr>
-                      <tr>
-                        <td>1/15/18</td>
-                        <td>1/17/18</td>
-                        <td>Added to policy</td>
-                        <td><button>Donwload Dec Page</button></td>
+                        <td class="dateAdded">1/15/18</td>
+                        <td class="effectiveDate">1/17/18</td>
+                        <td class="status">Added to policy</td>
+                        <td><button class="download">Dec Page</button></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
+            </div>
             </div>
             <!-- end of endorsement history box -->
 
@@ -488,50 +504,54 @@
                   <span class="section-header">Claims History</span>
                 </div>
               </div>
+              <div id="claims">
               <div class="row">
                 <div class="col-lg-12">
                   <table>
                     <tbody>
-                      <tr>
-                        <td>Acc. Date</td>
-                        <td>Claim #</td>
-                        <td>Status</td>
-                        <td>Loss Incurred</td>
-                        <td>Description</td>
+                      <tr id="header-row">
+                        <td><span class="sort" data-sort="accDate">Acc. Date</span></td>
+                        <td><span class="sort">Claim #</span></td>
+                        <td><span class="sort" data-sort="status">Status</span></td>
+                        <td><span class="sort">Loss Incurred</span></td>
+                        <td><span class="sort">Description</span></td>
                       </tr>
+                    </tbody>
+                    <tbody class="list">
                       <tr>
-                        <td>5/28/18</td>
+                        <td class="accDate">5/28/18</td>
                         <td>HMCB18010001-3</td>
-                        <td>Open</td>
+                        <td class="status">Open</td>
                         <td>$5,538.29</td>
-                        <td>Ceiling in living room, furniture, wood floors damaged, due to pipe bursting.</td>
+                        <td id="claimDescription">Ceiling in living room, furniture, wood floors damaged, due to pipe bursting.</td>
                       </tr>
                       <tr>
-                        <td>1/18/18</td>
+                        <td class="accDate">1/18/18</td>
                         <td>HMCB10010090-1</td>
-                        <td>Closed</td>
+                        <td class="status">Closed</td>
                         <td>$25,300.00</td>
-                        <td>Part of house burned due to electrical fire.</td>
+                        <td id="claimDescription">Part of house burned due to electrical fire.</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
             </div>
+            </div>
             <!-- end of claims history box -->
 
             <div class="additional-footer">
               <div class="row">
                 <div class="col-lg-12">
-                  <button>New Claim</button>
-                  <button>Download Loss Run</button>
+                  <button class="add">New Claim</button>
+                  <button class="download">Loss Run</button>
                 </div><!--/col -->
               </div><!-- /row -->
             </div>
             <!-- end of add'l footer -->
 
             <hr>
-            <a href="index.html"><button>back</button></a>
+            <a href="index.html"><button class="back">back</button></a>
             <div class="callout">
               Swyfft does not currently support coverage endorsements through our web app.  If you’d like to make a coverage endorsement you can contact our customer service representative at 888.888.8888 to quote and process coverage endorsements.
             </div><!-- /callout -->
@@ -585,10 +605,38 @@ $('.boxed-section button').click(function(){
   window.location.href = "manage-expand.html";
 });
 
-/* post address to header */
-window.onload = function() {
-    document.getElementById('variableAddress').innerText = sessionStorage.getItem('address');
+  /* payment history table sorting */
+  var options = {
+    valueNames: [ 'dueDate', 'processedDate', 'status' ]
   };
+
+  var paymentList = new List('payments', options);
+
+  paymentList.sort("dueDate", {
+      order: "asc"
+  });
+
+  /* endorsement history table sorting */
+  var options = {
+    valueNames: [ 'dateAdded', 'effectiveDate', 'status' ]
+  };
+
+  var endorsementList = new List('endorsements', options);
+
+  endorsementList.sort("dateAdded", {
+      order: "asc"
+  });
+
+  /* claims history table sorting */
+  var options = {
+    valueNames: [ 'accDate', 'status' ]
+  };
+
+  var claimsList = new List('claims', options);
+
+  claimsList.sort("accDate", {
+      order: "asc"
+  });
 
 </script>
 

@@ -68,3 +68,15 @@ button.back{
 button.manage{
     @include primary-button("../img/icons/arrow-right.png");
 }
+
+button.money{
+  @include primary-button("../img/icons/money.png")
+}
+
+button.chevron{
+  @include primary-button("../img/icons/chevron.png")
+}
+
+button.download{
+  @include primary-button("../img/icons/download.png")
+}
