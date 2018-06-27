@@ -5,12 +5,14 @@ $gray-white: #FAFBFC;
 $gray-lightest: #F2F4F5;
 $gray-medium: #E8EAEB;
 $gray-light: #8E8E8E;
+$gray-dark: #555555;
 $white: #FFFFFF;
 $green-1: #8fbf21;
 
 /* spacing unit */
-$unit: 20px;
-$unit-1: 35px;
+$unit: 15px;
+$unit-1: 25px;
+$unit-2: 35px;
 
 /* ui elements */
 @mixin section-box{
@@ -20,12 +22,29 @@ $unit-1: 35px;
 	margin-bottom: $unit;
 }
 
+@mixin section-box-dashed{
+	border: 1px dashed $gray-medium;
+	border-radius: 5px;
+	padding: 20px;
+	margin-bottom: $unit-1;
+}
+
 .additional-footer{
 	margin: -25px 0 $unit 0;
     background-color: $gray-white;
     border: 1px solid $gray-medium;
     padding: 15px;
     text-align: right;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.overview-footer{
+	margin: -26px 0 $unit 0;
+    background-color: $gray-white;
+    border: 1px dashed $gray-medium;
+    padding: 15px;
+    text-align: center;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
