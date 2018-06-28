@@ -66,14 +66,34 @@
 
         <div id="users">
           <div class="row">
-            <div class="col-lg-9">
+            <div class="col-lg-8">
               <input class="search" placeholder="Search by Name, Address, Premium, etc." />
             </div><!--/.col -->
-            <div class="col-lg-3">
-              <a href="#" id="policy-click">Policies</a>
+            <div class="col-lg-4">
+              <!--<a href="#" id="policy-click">Policies</a>
               <a href="#" id="quote-click">Quotes</a>
-              <a href="#" id="all-click">All</a>
-            </div>
+              <a href="#" id="all-click">All</a>-->
+            
+
+
+                  <input type="radio" id="policy-click" name="type"
+                         value="policies" class="radio-input"/>
+                  <label for="policies" class="subhead radio-label">Policies</label>
+
+
+
+                  <input type="radio" id="quote-click" name="type"
+                         value="quotes" class="radio-input" />
+                  <label for="quotes" class="subhead radio-label">Quotes</label>
+
+
+
+                  <input type="radio" id="all-click" name="type"
+                         value="all" class="radio-input" checked/>
+                  <label for="all" class="subhead radio-label">All</label>
+
+            </div><!-- /.col -->
+
           </div><!-- /.row -->
           <table>
             <tbody>
