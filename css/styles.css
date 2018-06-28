@@ -467,6 +467,22 @@ table {
   color: #342E39;
   font-weight: 400; }
 
+#account-status-warning {
+  font-weight: 700;
+  padding-left: 35px;
+  color: #F0717F; }
+  #account-status-warning:before {
+    content: "";
+    background-image: url("../img/icons/warning.png");
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 10px; }
+
+#payment-status {
+  margin-top: 15px;
+  font-weight: 700; }
+
 .internal-section {
   margin-bottom: 40px; }
 
