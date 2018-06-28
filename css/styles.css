@@ -386,6 +386,33 @@ table {
   color: #342E39;
   font-weight: 400; }
 
+button.test {
+  padding: 10px 30px 10px 45px;
+  height: 40px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  border: 1px solid #E8EAEB;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+  color: #342E39;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  position: relative;
+  text-transform: capitalize; }
+  button.test:before {
+    content: "";
+    background-image: url("../img/icons/link.png");
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: 20px; }
+  button.test:hover {
+    border: 1px solid #8fbf21; }
+  button.test:focus {
+    outline: none; }
+
 .internal-section {
   margin-bottom: 40px; }
 

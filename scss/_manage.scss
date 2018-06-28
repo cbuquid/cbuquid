@@ -68,3 +68,7 @@ table{
 
 }
 
+button.test{
+	@include primary-button("../img/icons/link.png");
+}
+
