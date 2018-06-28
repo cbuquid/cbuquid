@@ -27,6 +27,14 @@
   <!-- list js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
   <script src="js/list.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script>
+  /* post address to header */
+  window.onload = function() {
+      document.getElementById('variableAddress').innerText = sessionStorage.getItem('address');
+    };
+  </script>
 
 
 </head>
@@ -49,6 +57,7 @@
 
   <section class="body">
     <div class="container">
+
       <div class="row">
 
         <ul class="col-lg-2 sidebar">
@@ -60,7 +69,7 @@
         </ul>
 
         <div class="col-lg-10 main">
-          <span class="page-header">You are adding an endorsement for <span class="address">[Variable Address]</span></span>
+          <span class="page-header">You are adding an endorsement for <span id="variableAddress" class="address">[Variable Address]</span></span>
 
           <section id="second-nav">
             <div class="row">
@@ -91,7 +100,7 @@
               <!-- end of effective date box -->
 
               <!-- payment type box -->
-              <div class="boxed-section">
+              <div id="paymentType" class="boxed-section">
                 <div class="row">
                   <div class="col-lg-10">
                     <span class="section-header">Payment Type</span>
@@ -306,7 +315,7 @@
 
               <hr>
               <button class="back"><a href="manage.html">back</a></button>
-              <button id="submit" class="inactive submit secondary">Submit Endorsements</button>
+              <button type="button" id="submit" class="inactive submit secondary" data-toggle="modal" data-target="#submit-endorsements-modal">Submit Endorsements</button>
                <div id ="callout" class="boxed-section">
                 Swyfft does not currently support coverage endorsements through our web app.  If you’d like to make a coverage endorsement you can contact our customer service representative at <a href="#">888.888.8888</a> to quote and process coverage endorsements.
               </div><!-- /callout -->
@@ -324,10 +333,96 @@
         </div><!-- /col -->
       </div><!-- /row -->
     </div><!-- /container -->
+
   </section>
 
-<script>
+  <!-- Modal -->
+  <div class="modal" id="submit-endorsements-modal" aria-hidden="true">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+            <div class="modal-dialog">
+              <div class="row">
+                <div class="col-lg-12">
+                  <button class="modal-close" data-dismiss="modal" data-target="#submit-endorsements-modal" aria-hidden="true"><img width="15px" src="../swyfftdesign/img/icons/close.svg"></button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="modal-header">
+                    <h2 class="modal-title">You are making the following changes. <span id="modal-emphasis">Please confirm:</span></h2>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="modal-body">
+                    <div id="table-alternating-colors">
+                      <table>
+                        <tbody>
+                          <tr id="header-row">
+                            <td>Endorsement</td>
+                            <td id="old-value-header">Old Values</td>
+                            <td id="new-value-header">New Values</td>
+                          </tr>
+                        </tbody>
+                        <tbody id="endorsement-changes" class="list">
+                          <tr>
+                            <td>Effective Date</td>
+                            <td>12/28/17</td>
+                            <td>12/31/17</td>
+                          </tr>
+                          <tr>
+                            <td>Payment Type</td>
+                            <td>Monthly Credit Card Payments</td>
+                            <td>Annual Escrow Payments</td>
+                          </tr>
+                          <tr>
+                            <td>Primary Insured</td>
+                            <td>Wanda Geisler</td>
+                            <td>Wanda Geiseler</td>
+                          </tr>
+                          <tr>
+                            <td>Additional Named Insured</td>
+                            <td>None Listed</td>
+                            <td>Tim Geisler, tgeisler@gmail.com, 555-555-5555, 200 Davis St, Vacaville, CA 95687</td>
+                          </tr>
+                          <tr>
+                            <td>Additional Interest #1</td>
+                            <td>J.P. Morgan Chase, JP-93-810381, P.O. Box 183166, Columbus, OH 43218</td>
+                            <td>Wells Fargo, WF-23-810381, P.O. Box 10335, Des Moines, IA 50306</td>
+                          </tr>
+                          <tr>
+                            <td>Additional Interest #2</td>
+                            <td>Tim Geiseler, 200 Davis St, Vacaville, CA 95687</td>
+                            <td>Deleted</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
+              <div class="additional-footer">
+                <table class="modal-actions">
+                  <tbody>
+                  <tr>
+                    <td class="align-left"><a href="manage-expand.html"><button class="back">back</button></a></td>
+                    <td class="align-right"><button class="secondary">Confirmed, Generate New Dec Page</button></td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  <!-- /Modal -->
+
+<script>
 
 /* Change section to endorse/payment/policy */
 

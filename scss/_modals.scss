@@ -1,0 +1,66 @@
+.modal-dialog {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 86%;
+  border-top: 3px solid $green-1;
+  margin-top: 20%;
+}
+
+button.modal-close {
+  @include modal-header;
+  border:none;
+  background-color: none;
+  color: $black;
+  float:right;
+  &:hover {
+    color: $green-1;
+    text-decoration: none !important;
+  }
+}
+
+.modal-header {
+  @include modal-header;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 0 $unit-1 0;
+  max-width: 62%;
+  border: none;
+}
+
+.modal-body {
+  max-width: 84%;
+  margin: 0 auto;
+  min-height: 500px;
+  max-height: 800px;
+  overflow: scroll;
+}
+
+#modal-emphasis {
+  font-weight: bold;
+}
+
+#old-value-header {
+  color: $red-warning;
+}
+
+#new-value-header {
+  color: $green-1;
+}
+
+#endorsement-changes {
+  td:nth-child(2){
+    color: $gray-medium-dark;
+  }
+}
+
+td.align-left {
+  text-align: left;
+}
+td.align-right {
+  text-align: right;
+}
+
+.modal-actions {
+  padding: 0;
+  margin: 0;
+}
