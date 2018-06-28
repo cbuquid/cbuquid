@@ -82,7 +82,7 @@
           <section id="add-endorsements" class="active">
 
               <!-- effective date box -->
-              <div class="boxed-section">
+              <div id="date" class="boxed-section">
                 <div class="row">
                   <div class="col-lg-10">
                     <span class="section-header">Effective Date</span>
@@ -98,28 +98,29 @@
                 </div><!-- /row -->
               </div>
               <!-- end of effective date box -->
-
               <!-- payment type box -->
-              <div id="paymentType" class="boxed-section">
+
+              <div id="payment-type-sc" class="boxed-section">
                 <div class="row">
                   <div class="col-lg-10">
                     <span class="section-header">Payment Type</span>
                   </div>
                   <div class="col-lg-2">
-                   <button class="cancel">Cancel</button>
+                   <button id="cancel-payment-type" class="cancel">Cancel</button>
                   </div><!-- /col -->
                 </div><!-- / row -->
+                <form id="payment-form">
                 <div class="row">
                   <div class="col-lg-8 offset-lg-2">
                     <div class="internal-section">
                       <div class="body-copy bottom-15">Select payment term:</div>
                       <ul class="tab-radio">
                         <li>
-                            <input type="radio" id="annual" name="amount"/>
+                            <input class="payment-type-change" type="radio" id="annual" name="payment-term"/>
                             <label for="annual">Annual</label>
                         </li>
                         <li>
-                            <input type="radio" id="monthly" name="amount" checked/>
+                            <input class="payment-type-change" type="radio" id="monthly" name="payment-term" checked/>
                             <label for="monthly">Monthly</label>
                         </li>
                       </ul>
@@ -129,15 +130,15 @@
                       <div class="body-copy bottom-15">Select payment type:</div>
                       <ul class="tab-radio">
                         <li>
-                            <input type="radio" id="cc" name="payment-type" checked/>
+                            <input class="payment-type-change" type="radio" id="cc" name="payment-type" checked/>
                             <label for="cc">Credit Card</label>
                         </li>
                         <li>
-                            <input type="radio" id="echeck" name="payment-type" />
+                            <input class="payment-type-change" type="radio" id="echeck" name="payment-type" />
                             <label for="echeck">Echeck</label>
                         </li>
                         <li>
-                            <input type="radio" id="escrow" name="payment-type" />
+                            <input class="payment-type-change" type="radio" id="escrow" name="payment-type" />
                             <label for="escrow">Escrow</label>
                         </li>
                       </ul>
@@ -146,30 +147,30 @@
                     <div class="internal-section">
                       <div class="section-header bottom-15">Credit Card Information</div>
                       <label class="body-copy">Full name shown on card:</label>
-                      <input type="text" name="fname" value="Wanda Geisler" class="bottom-15">
+                      <input type="text" name="fname" value="Wanda Geisler" class="bottom-15 payment-type-change">
                       <label class="body-copy">Credit Card Number:</label>
-                      <input type="text" name="cc-number" value="4111-4111-4111-4111" class="bottom-15">
+                      <input type="text" name="cc-number" value="4111-4111-4111-4111" class="bottom-15 payment-type-change">
                     </div><!-- /internal-section -->
 
                     <div class="internal-section">
                       <div class="section-header bottom-15">Customer Billing Address</div>
                       <label class="body-copy">Street Address:</label>
-                      <input type="text" name="address" value="200 Davis St" class="bottom-15">
+                      <input type="text" name="address" value="200 Davis St" class="bottom-15 payment-type-change">
 
                       <div class="row">
                         <div class="col-lg-5">
                           <label class="body-copy">City:</label>
-                          <input type="text" name="city" value="Vacaville" class="bottom-15">
+                          <input type="text" name="city" value="Vacaville" class="bottom-15 payment-type-change">
                         </div>
 
                         <div class="col-lg-3">
                           <label class="body-copy">State:</label>
-                          <input type="text" name="state" value="CA" class="bottom-15">
+                          <input type="text" name="state" value="CA" class="bottom-15 payment-type-change">
                         </div>
 
                         <div class="col-lg-4">
                           <label class="body-copy">Zip Code:</label>
-                          <input type="text" name="zip" value="95687" class="bottom-15">
+                          <input type="text" name="zip" value="95687" class="bottom-15 payment-type-change">
                         </div>
                       </div>
 
@@ -177,71 +178,113 @@
 
                   </div><!--/col -->
                 </div><!-- /row -->
+                </form>
               </div>
               <!-- end of payment type box -->
 
               <!-- named insured box -->
-              <div class="boxed-section">
+              
+              <div id="named-insured" class="boxed-section">
                 <div class="row">
                   <div class="col-lg-10">
                     <span class="section-header">Named Insured</span>
                   </div>
                   <div class="col-lg-2">
-                   <button class="cancel">cancel</button>
+                   <button id="cancel-named-insured" class="cancel">cancel</button>
                   </div>
                 </div><!-- /row -->
 
+                <form id="named-insured-form">
                 <div class="row">
                   <div class="col-lg-8 offset-lg-2">
 
                     <div class="internal-section">
                       <div class="section-header bottom-15">Primary Insured</div>
                       <label class="body-copy">Full Name (First Last or Business Name)</label>
-                      <input type="text" name="prim-name" value="Wanda Geisler" class="bottom-15">
+                      <input type="text" name="prim-name" value="Wanda Geisler" class="bottom-15 named-insured-change">
 
                       <div class="row">
                         <div class="col-lg-7">
                           <label class="body-copy">Email Address:</label>
-                          <input type="text" name="email" value="wandageiseler@gmail.com" class="bottom-15">
+                          <input type="text" name="email" value="wandageiseler@gmail.com" class="bottom-15 named-insured-change">
                         </div>
 
                         <div class="col-lg-5">
                           <label class="body-copy">Phone Number:</label>
-                          <input type="text" name="state" value="555-555-5555" class="bottom-15">
+                          <input type="text" name="state" value="555-555-5555" class="bottom-15 named-insured-change">
                         </div>
                       </div><!-- /row -->
 
                       <label class="body-copy">Street Address:</label>
-                      <input type="text" name="address" value="200 Davis St" class="bottom-15">
+                      <input type="text" name="address" value="200 Davis St" class="bottom-15 named-insured-change">
                       <div class="row">
                         <div class="col-lg-5">
                           <label class="body-copy">City:</label>
-                          <input type="text" name="city" value="Vacaville" class="bottom-15">
+                          <input type="text" name="city" value="Vacaville" class="bottom-15 named-insured-change">
                         </div>
 
                         <div class="col-lg-3">
                           <label class="body-copy">State:</label>
-                          <input type="text" name="state" value="CA" class="bottom-15">
+                          <input type="text" name="state" value="CA" class="bottom-15 named-insured-change">
                         </div>
 
                         <div class="col-lg-4">
                           <label class="body-copy">Zip Code:</label>
-                          <input type="text" name="zip" value="95687" class="bottom-15">
+                          <input type="text" name="zip" value="95687" class="bottom-15 named-insured-change">
                         </div>
                       </div>
 
                     </div><!-- /internal-section -->
 
+                    <div id="insured-2" class="internal-section">
+                      <div class="section-header bottom-15">Additional Named Insured #1<img src="img/icons/delete.png" class="inline-icon" id="delete-insured-2"></div>
+                      <label class="body-copy">Full Name (First Last or Business Name)</label>
+                      <input type="text" name="prim-name" placeholder="e.g. Jane Doe or Company, LLC." class="bottom-15 named-insured-change">
+
+                      <div class="row">
+                        <div class="col-lg-7">
+                          <label class="body-copy">Email Address:</label>
+                          <input type="text" name="email" placeholder="e.g. example@mail.com" class="bottom-15 named-insured-change">
+                        </div>
+
+                        <div class="col-lg-5">
+                          <label class="body-copy">Phone Number:</label>
+                          <input type="text" name="state" placeholder="e.g. 555-555-5555" class="bottom-15 named-insured-change">
+                        </div>
+                      </div><!-- /row -->
+
+                      <label class="body-copy">Street Address:</label>
+                      <input type="text" name="address" placeholder="e.g. 1515 Broadway" class="bottom-15 named-insured-change">
+                      <div class="row">
+                        <div class="col-lg-5">
+                          <label class="body-copy">City:</label>
+                          <input type="text" name="city" placeholder="e.g. New York" class="bottom-15 named-insured-change">
+                        </div>
+
+                        <div class="col-lg-3">
+                          <label class="body-copy">State:</label>
+                          <input type="text" name="state" placeholder="NY" class="bottom-15 named-insured-change">
+                        </div>
+
+                        <div class="col-lg-4">
+                          <label class="body-copy">Zip Code:</label>
+                          <input type="text" name="zip" placeholder="e.g. 01234" class="bottom-15 named-insured-change">
+                        </div>
+                      </div>
+
+                    </div><!-- /internal-section -->                    
+
                   </div><!-- /col -->
                 </div><!-- /row -->
-
+                </form>
               </div>
+              
               <!-- end of named insured box -->
 
               <div class="additional-footer">
                 <div class="row">
                   <div class="col-lg-12">
-                    <button class="add">Additional Named Insured</button>
+                    <button id="add-insured" class="add">Additional Named Insured</button>
                   </div><!--/col -->
                 </div><!-- /row -->
               </div>
@@ -254,68 +297,111 @@
                     <span class="section-header">Additional Interests</span>
                   </div>
                   <div class="col-lg-2">
-                   <button class="cancel">Cancel</button>
+                   <button id="cancel-additional-interests" class="cancel">Cancel</button>
                   </div>
                 </div><!-- /row -->
+                <form id="additional-interests-form">
                 <div class="row">
                   <div class="col-lg-8 offset-lg-2">
 
                     <div class="internal-section">
-                      <div class="section-header bottom-15">Additional Interst #1<img src="img/icons/delete.png" class="inline-icon"></div>
+                      <div class="section-header bottom-15">Additional Interest #1<img src="img/icons/delete.png" class="inline-icon"></div>
                       <label class="body-copy">Full Name (First Last or Business Name):</label>
-                      <input type="text" name="prim-name" value="J.P. Morgan Chase" class="bottom-15">
+                      <input type="text" name="prim-name" value="J.P. Morgan Chase" class="bottom-15 additional-interests-change">
                       <label class="body-copy">Loan Number (if applicable):</label>
-                      <input type="text" name="email" value="JP-93-810381" class="bottom-15">
+                      <input type="text" name="email" value="JP-93-810381" class="bottom-15 additional-interests-change">
                       <label class="body-copy">Street Address:</label>
-                      <input type="text" name="state" value="P.O. Box 183166" class="bottom-15">
+                      <input type="text" name="state" value="P.O. Box 183166" class="bottom-15 additional-interests-change">
                       <div class="row">
                         <div class="col-lg-5">
                           <label class="body-copy">City:</label>
-                          <input type="text" name="city" value="Columbus" class="bottom-15">
+                          <input type="text" name="city" value="Columbus" class="bottom-15 additional-interests-change">
                         </div>
 
                         <div class="col-lg-3">
                           <label class="body-copy">State:</label>
-                          <input type="text" name="state" value="OH" class="bottom-15">
+                          <input type="text" name="state" value="OH" class="bottom-15 additional-interests-change">
                         </div>
 
                         <div class="col-lg-4">
                           <label class="body-copy">Zip Code:</label>
-                          <input type="text" name="zip" value="43218" class="bottom-15">
+                          <input type="text" name="zip" value="43218" class="bottom-15 additional-interests-change">
                         </div>
                       </div><!-- /row -->
 
                       <label class="body-copy">Select additional interest type:</label>
                      <ul class="tab-radio">
                         <li>
-                            <input type="radio" id="annual" name="amount"/>
-                            <label for="annual">Mortgagee</label>
+                            <input type="radio" id="mortgagee" name="int-type" class="additional-interests-change"/>
+                            <label for="mortgagee">Mortgagee</label>
                         </li>
                         <li>
-                            <input type="radio" id="monthly" name="amount" checked/>
-                            <label for="monthly">Loss Payee</label>
+                            <input type="radio" id="losspayee" name="int-type" class="additional-interests-change" checked/>
+                            <label for="losspayee">Loss Payee</label>
                         </li>
                       </ul>
 
                     </div><!-- /internal-section -->
 
+                    <div id="interest-2" class="internal-section">
+                      <div class="section-header bottom-15">Additional Interest #2<img src="img/icons/delete.png" class="inline-icon" id="delete-interest-2"></div>
+                      <label class="body-copy">Full Name (First Last or Business Name):</label>
+                      <input type="text" name="prim-name" placeholder="e.g. J.P. Morgan Chase" class="bottom-15 additional-interests-change">
+                      <label class="body-copy">Loan Number (if applicable):</label>
+                      <input type="text" name="email" placeholder="e.g. JP-93-810381" class="bottom-15 additional-interests-change">
+                      <label class="body-copy">Street Address:</label>
+                      <input type="text" name="state" placeholder="e.g. P.O. Box 183166" class="bottom-15 additional-interests-change">
+                      <div class="row">
+                        <div class="col-lg-5">
+                          <label class="body-copy">City:</label>
+                          <input type="text" name="city" placeholder="e.g. Columbus" class="bottom-15 additional-interests-change">
+                        </div>
+
+                        <div class="col-lg-3">
+                          <label class="body-copy">State:</label>
+                          <input type="text" name="state" placeholder="OH" class="bottom-15 additional-interests-change">
+                        </div>
+
+                        <div class="col-lg-4">
+                          <label class="body-copy">Zip Code:</label>
+                          <input type="text" name="zip" placeholder="e.g. 43218" class="bottom-15 additional-interests-change">
+                        </div>
+                      </div><!-- /row -->
+
+                      <label class="body-copy">Select additional interest type:</label>
+                     <ul class="tab-radio">
+                        <li>
+                            <input type="radio" id="mortgagee-2" name="type-add-3" class="additional-interests-change" checked/>
+                            <label for="annual">Mortgagee</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="payee-2" name="type-add-3" class="additional-interests-change"/>
+                            <label for="monthly">Loss Payee</label>
+                        </li>
+                      </ul>
+
+                    </div><!-- /internal-section -->                    
+
                   </div><!-- /col -->
                 </div><!-- /row -->
+                </form>
               </div>
               <!-- end of named insured box -->
 
               <div class="additional-footer">
                 <div class="row">
                   <div class="col-lg-12">
-                    <button class="add">Additional Interest</button>
+                    <button id="add-interest" class="add">Additional Interest</button>
                   </div><!--/col -->
                 </div><!-- /row -->
               </div>
               <!-- end of add'l footer -->
 
               <hr>
-              <button class="back"><a href="manage.html">back</a></button>
+
+              <a href="manage.html" class="btn-tag"><button class="back">back</button></a>
               <button type="button" id="submit" class="inactive submit secondary" data-toggle="modal" data-target="#submit-endorsements-modal">Submit Endorsements</button>
+
                <div id ="callout" class="boxed-section">
                 Swyfft does not currently support coverage endorsements through our web app.  If you’d like to make a coverage endorsement you can contact our customer service representative at <a href="#">888.888.8888</a> to quote and process coverage endorsements.
               </div><!-- /callout -->
@@ -424,17 +510,56 @@
 
 <script>
 
+
 /* Change section to endorse/payment/policy */
 
 
-$('#payment').click(function(){
+$('#add-insured').click(function(){
+  $('#insured-2').addClass('visible');
+});
 
+$('#add-interest').click(function(){
+  $('#interest-2').addClass('visible');
+});
+
+$('#delete-interest-2').click(function(){
+  $('#interest-2').removeClass('visible');
+});
+
+$('#delete-insured-2').click(function(){
+  $('#insured-2').removeClass('visible');
+});
+
+/* form resetting */
+
+$('.payment-type-change').change(function(){
+  $('#cancel-payment-type').addClass('active');
+});
+
+$('#cancel-payment-type').click(function(){
+  $('#payment-form')[0].reset();
+  $(this).removeClass('active');
+});
+
+$('.named-insured-change').change(function(){
+  $('#cancel-named-insured').addClass('active');
+});
+
+$('#cancel-named-insured').click(function(){
+  $('#named-insured-form')[0].reset();
+  $(this).removeClass('active');
+});
+
+$('.additional-interests-change').change(function(){
+  $('#cancel-additional-interests').addClass('active');
+});
+
+$('#cancel-additional-interests').click(function(){
+  $('#additional-interests-form')[0].reset();
+  $(this).removeClass('active');
 });
 
 
-$('#policy').click(function(){
-
-});
 
 
 $( function() {

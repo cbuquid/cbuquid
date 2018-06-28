@@ -9,15 +9,14 @@ a{
 		border-bottom: 1px solid $green-1;
 		margin-bottom: -1px;
 	}
-}
 
-button a{
-	color: unset;
-
-	&:hover{
+	&.btn-tag{
+		padding-bottom: 0;
 		color: unset;
-		border-bottom: unset;
-		margin-bottom: unset;
+
+		&:hover{
+			border-bottom: unset;
+		}
 	}
 }
 
