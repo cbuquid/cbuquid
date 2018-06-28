@@ -245,11 +245,11 @@ window.onload = function() {
                   </div>
                 </div>
                 <div class="col-lg-4">
-                  <div class="value-header">
-                    Warning
+                  <div class="overview-data value-header">
+                    <span id="account-status-warning">Warning</span>
                   </div>
                   <div class="label">
-                    The payment due 5/28/18 did not process because of <span>Expired Card</span>
+                    The payment due 5/28/18 did not process because of:<br><span id="payment-status">Expired Card</span>
                   </div>
                 </div>
               </div>
@@ -277,7 +277,7 @@ window.onload = function() {
               <div id="payments">
               <div class="row">
                 <div class="col-lg-12">
-                  <table>
+                  <table class="alternating-colors">
                     <tbody>
                       <tr id="header-row">
                         <td><span class="sort" data-sort="dueDate">Due Date</span></td>
@@ -625,7 +625,7 @@ $('button.add').click(function(){
   var paymentList = new List('payments', options);
 
   paymentList.sort("dueDate", {
-      order: "asc"
+      order: "desc"
   });
 
   /* endorsement history table sorting */
@@ -636,7 +636,7 @@ $('button.add').click(function(){
   var endorsementList = new List('endorsements', options);
 
   endorsementList.sort("dateAdded", {
-      order: "asc"
+      order: "desc"
   });
 
   /* claims history table sorting */
@@ -647,7 +647,7 @@ $('button.add').click(function(){
   var claimsList = new List('claims', options);
 
   claimsList.sort("accDate", {
-      order: "asc"
+      order: "desc"
   });
 
 </script>
