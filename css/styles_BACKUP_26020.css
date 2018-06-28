@@ -235,7 +235,9 @@ button.manage {
   button.manage:focus {
     outline: none; }
 
+
 button.money {
+button.cancel {
   padding: 10px 30px 10px 45px;
   height: 40px;
   background-color: #FFFFFF;
@@ -253,6 +255,9 @@ button.money {
   button.money:before {
     content: "";
     background-image: url("../img/icons/money.png");
+  button.cancel:before {
+    content: "";
+    background-image: url("../img/icons/undo.png");
     height: 15px;
     width: 15px;
     position: absolute;
@@ -315,29 +320,6 @@ button.download {
     border: 1px solid #8fbf21; }
   button.download:focus {
     outline: none; }
-
-button.cancel {
-  padding: 10px 30px 10px 45px;
-  height: 40px;
-  background-color: #FFFFFF;
-  border-radius: 30px;
-  border: 1px solid #E8EAEB;
-  font-size: 14px;
-  letter-spacing: 0.3px;
-  line-height: 1.3;
-  color: #342E39;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 200ms ease-in;
-  position: relative;
-  text-transform: capitalize; }
-  button.cancel:before {
-    content: "";
-    background-image: url("../img/icons/undo.png");
-    height: 15px;
-    width: 15px;
-    position: absolute;
-    left: 20px; }
   button.cancel:hover {
     border: 1px solid #8fbf21; }
   button.cancel:focus {
@@ -466,49 +448,6 @@ table {
   line-height: 1.5;
   color: #342E39;
   font-weight: 400; }
-
-button.test {
-  padding: 10px 30px 10px 45px;
-  height: 40px;
-  background-color: #FFFFFF;
-  border-radius: 30px;
-  border: 1px solid #E8EAEB;
-  font-size: 14px;
-  letter-spacing: 0.3px;
-  line-height: 1.3;
-  color: #342E39;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 200ms ease-in;
-  position: relative;
-  text-transform: capitalize; }
-  button.test:before {
-    content: "";
-    background-image: url("../img/icons/link.png");
-    height: 15px;
-    width: 15px;
-    position: absolute;
-    left: 20px; }
-  button.test:hover {
-    border: 1px solid #8fbf21; }
-  button.test:focus {
-    outline: none; }
-
-#account-status-warning {
-  font-weight: 700;
-  padding-left: 35px;
-  color: #F0717F; }
-  #account-status-warning:before {
-    content: "";
-    background-image: url("../img/icons/warning.png");
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    left: 10px; }
-
-#payment-status {
-  margin-top: 15px;
-  font-weight: 700; }
 
 .internal-section {
   margin-bottom: 40px; }
@@ -678,7 +617,7 @@ nav {
   height: 30px;
   position: relative;
   font-size: 12px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   line-height: 1.3;
   color: #342E39;
   font-weight: 700;
@@ -718,5 +657,46 @@ nav {
 
 .sort.desc, .sort.asc {
   color: #8fbf21; }
+  #users .sort {
+    display: inline-block;
+    color: #8E8E8E;
+    text-decoration: none;
+    height: 30px;
+    position: relative;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    color: #342E39;
+    font-weight: 700;
+    /* defined in _fonts.scss */ }
+  #users .sort:hover {
+    text-decoration: none; }
+  #users .sort:focus {
+    outline: none; }
+  #users .sort.asc:after, #users .sort:after {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #8E8E8E;
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: -15px; }
+  #users .sort.asc:after {
+    border-top: 5px solid #8fbf21; }
+  #users .sort.desc:after {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #8fbf21;
+    border-top: none !important;
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: -15px; }
+  #users .sort.desc, #users .sort.asc {
+    color: #8fbf21; }
 
 /* end quotes table - #users */

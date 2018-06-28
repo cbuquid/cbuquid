@@ -72,3 +72,27 @@ button.test{
 	@include primary-button("../img/icons/link.png");
 }
 
+@mixin account-status($icon-url: null){
+	font-weight: 700;
+	padding-left: $unit-2;
+
+	&:before {
+		content: "";
+		background-image: url($icon-url);
+		height: 30px;
+		width: 30px;
+		position: absolute;
+		left: 10px;
+	}
+}
+
+#account-status-warning {
+	@include account-status("../img/icons/warning.png");
+	color: #F0717F;
+}
+
+#payment-status {
+	margin-top: $unit;
+	font-weight: 700;
+}
+

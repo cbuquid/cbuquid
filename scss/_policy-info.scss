@@ -1,35 +1,79 @@
+@mixin contact-phone($icon-url: null){
+
+       padding: 0px $unit-1 0px $unit;
+       font-size: 16px;
+       font-weight: 400;
+       line-height: 1.3;
+       padding-right: $unit-1;
+
+
+       &:before{
+          content: "";
+          background-image: url($icon-url);
+          height: 15px;
+          width: 15px;
+          position: absolute;
+          left: 140px;
+          top: 3px;
+      }
+    }
+
+    @mixin contact-email($icon-url: null){
+
+           padding: 0px $unit-1 0px $unit;
+           font-size: 16px;
+           font-weight: 400;
+           line-height: 1.3;
+           padding-right: $unit-1;
+
+
+           &:before{
+              content: "";
+              background-image: url($icon-url);
+              height: 15px;
+              width: 15px;
+              position: absolute;
+              left: 275px;
+              top: 5px;
+          }
+        }
+
 .boxed-section-dashed{
   @include section-box-dashed; /* defined in _var.scss */
 }
 
 .overview-data {
-  margin-top: $unit;
-  margin-bottom: $unit;
-  padding-right: 25px;
-  padding-left: 10px;
+  margin: $unit auto;
 }
 
 .overview-wrapper {
-  margin: 0 auto;
+  width: 100%;
+  margin: 0 50px;
 }
 
 .label {
-  @include body-copy($gray-dark)
+  @include body-copy($gray-dark);
+  margin-bottom: 3px;
 }
 
-.contact {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.3;
-  padding-right: $unit-1;
+span.phone {
+  @include contact-phone("../img/icons/phone-default.png");
+}
+
+span.email {
+  @include contact-email("../img/icons/mail.png");
 }
 
 .contact-label {
-  @include body-copy($gray-dark)
+  @include body-copy($gray-dark);
   padding-right: $unit-1;
 }
 
 #dashed {
   border: 1px dashed $gray-medium;
   margin: -26px 0 $unit 0;
+}
+
+#claimDescription {
+  width: 327px;
 }

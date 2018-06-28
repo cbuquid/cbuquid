@@ -46,8 +46,8 @@ $transition: all 200ms ease-in;
 	margin: -26px 0 $unit 0;
     background-color: $gray-white;
     border: 1px dashed $gray-medium;
-    padding: 15px;
-    text-align: center;
+    padding: 15px 25px 15px 25px;
+    text-align: left;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -62,7 +62,7 @@ $transition: all 200ms ease-in;
     }
     margin-bottom: $unit-1;
 
-} 
+}
 
 /* spacing classes */
 
@@ -72,7 +72,3 @@ $transition: all 200ms ease-in;
 .bottom-15{
     margin-bottom: $unit;
 }
-
-
-
-

@@ -69,6 +69,18 @@ button.manage{
     @include primary-button("../img/icons/arrow-right.png");
 }
 
+button.money{
+  @include primary-button("../img/icons/money.png")
+}
+
+button.chevron{
+  @include primary-button("../img/icons/chevron.png")
+}
+
+button.download{
+  @include primary-button("../img/icons/download.png")
+}
+
 button.cancel{
     @include primary-button("../img/icons/undo.png");
 }
@@ -102,7 +114,7 @@ button.cancel{
     input[type="radio"] {
         opacity:0;
         z-index:100;
-    }  
+    }
 
     input[type="radio"]:checked + label,
     .Checked + label {
@@ -116,13 +128,13 @@ button.cancel{
         z-index:90;
         border-radius: 30px;
         line-height: 40px;
-        height: 40px;        
+        height: 40px;
         transition: $transition;
     }
 
     label:hover {
          background:$gray-medium;
-    }    
+    }
 }
 
 input{
@@ -142,5 +154,5 @@ input{
 
     &:hover{
         border: 1px solid $green-1;
-    }    
+    }
 }
