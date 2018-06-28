@@ -43,13 +43,11 @@ a {
     color: #8fbf21;
     border-bottom: 1px solid #8fbf21;
     margin-bottom: -1px; }
-
-button a {
-  color: unset; }
-  button a:hover {
-    color: unset;
-    border-bottom: unset;
-    margin-bottom: unset; }
+  a.btn-tag {
+    padding-bottom: 0;
+    color: unset; }
+    a.btn-tag:hover {
+      border-bottom: unset; }
 
 /* font family */
 /* font sizes */
@@ -343,6 +341,36 @@ button.cancel {
   button.cancel:focus {
     outline: none; }
 
+button.cancel.active {
+  padding: 10px 30px 10px 45px;
+  height: 40px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  border: 1px solid #E8EAEB;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+  color: #342E39;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  position: relative;
+  text-transform: capitalize;
+  background-color: #342E39;
+  color: #FFFFFF;
+  border: 1px solid #342E39; }
+  button.cancel.active:before {
+    content: "";
+    background-image: url("../img/icons/undo-white.png");
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: 20px; }
+  button.cancel.active:hover {
+    border: 1px solid #8fbf21; }
+  button.cancel.active:focus {
+    outline: none; }
+
 /* input styles */
 .tab-radio {
   list-style-type: none;
@@ -377,13 +405,13 @@ button.cancel {
   .tab-radio label {
     background-color: #F2F4F5;
     cursor: pointer;
-    z-index: 90;
+    z-index: 1000;
     border-radius: 30px;
     line-height: 40px;
     height: 40px;
     transition: all 200ms ease-in; }
-  .tab-radio label:hover {
-    background: #E8EAEB; }
+    .tab-radio label:hover {
+      background: #E8EAEB !important; }
 
 input {
   border-radius: 30px;
@@ -399,6 +427,18 @@ input {
     border: 1px solid #8fbf21; }
   input:hover {
     border: 1px solid #8fbf21; }
+  input::placeholder {
+    color: #E8EAEB; }
+
+input.radio-input {
+  width: auto !important;
+  display: inline-block; }
+
+label.radio-label {
+  display: inline-block;
+  position: relative;
+  top: -13px;
+  margin: 0 20px 0 10px; }
 
 /* overview */
 #manage .page-header .address {
@@ -483,11 +523,25 @@ table {
   margin-top: 15px;
   font-weight: 700; }
 
+#date {
+  display: block;
+  min-height: 300px; }
+
 .internal-section {
   margin-bottom: 40px; }
 
 .inline-icon {
-  margin: 0 0 5px 10px; }
+  margin: 0 0 5px 10px;
+  cursor: pointer; }
+
+/* additional interactions */
+#insured-2, #interest-2 {
+  position: absolute;
+  transition: all 500ms ease-in;
+  opacity: 0; }
+  #insured-2.visible, #interest-2.visible {
+    position: relative;
+    opacity: 1; }
 
 .boxed-section-dashed {
   border: 1px dashed #E8EAEB;
