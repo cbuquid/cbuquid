@@ -61,6 +61,13 @@ $lato: 'Lato', Helvetica, sans-serif;
 	color: #000;
 }
 
+@mixin modal-header{
+	font-size: 25px;
+	font-weight: 400;
+	line-height: 1.3;
+	color: #000;
+}
+
 @mixin page-header($color){
 	font-size: 36px;
 	font-weight: 300;
@@ -104,4 +111,10 @@ $lato: 'Lato', Helvetica, sans-serif;
 
 .value-header{
 	@include value-header;
+}
+
+.modal-title{
+	@include modal-header;
+	margin: 0 auto;
+	text-align: center;
 }

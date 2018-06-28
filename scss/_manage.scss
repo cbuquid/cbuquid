@@ -82,6 +82,12 @@ table{
 	}
 }
 
+.account-status {
+	@include body-copy($black);
+	max-width: 242px;
+	font-size: 16px;
+
+}
 #account-status-warning {
 	@include account-status("../img/icons/warning.png");
 	color: #F0717F;
@@ -95,4 +101,68 @@ table{
 #date{
 	display: block;
 	min-height: 300px;
+}
+// payments table
+#table-alternating-colors{
+
+  padding-top: 0px;
+
+  .list {
+    font-family:sans-serif;
+  }
+
+  .list td {
+    padding: 15px 10px;
+    @include body-copy(black); /* defined in _fonts.scss */
+  }
+
+  #header-row {
+		@include subhead($black);
+	  color:$gray-light;
+	  text-decoration: none;
+	  height:30px;
+	  @include subhead($black);
+
+		td{
+      padding: 0 10px;
+    }
+
+    span{
+    cursor: pointer;
+
+    &:hover{
+      color: $green-1;
+      }
+    }
+  }
+
+ tbody.list tr:nth-child(odd){
+      background-color: $gray-lightest;
+  }
+
+  input {
+    border:solid 1px $gray-medium;
+    border-radius: 30px;
+    padding:7px 14px;
+    margin-bottom:20px;
+    width: 100%;
+    cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+    @include body-copy(black); /* defined in _fonts.scss */
+
+    &::placeholder{
+      color: $gray-light !important;
+    }
+  }
+
+  input:focus {
+    outline:none;
+    border-color:$green-1;
+  }
+
+}
+
+#table-button {
+	text-align: right;
 }

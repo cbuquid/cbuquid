@@ -34,6 +34,7 @@
 window.onload = function() {
     document.getElementById('variableAddress').innerText = sessionStorage.getItem('address');
   };
+  
 </script>
 
 
@@ -97,7 +98,7 @@ window.onload = function() {
               <!-- end of effective date box -->
 
               <!-- payment type box -->
-              <div class="boxed-section">
+              <div id="paymentType"class="boxed-section">
                 <div class="row">
                   <div class="col-lg-2">
                     <span class="section-header">Payment Type</span>
@@ -149,28 +150,34 @@ window.onload = function() {
                    <a href="manage-expand.html#additional-interests" class="btn-tag"><button class="edit">Edit</button></a>
                   </div>
                 </div><!-- /row -->
-                <div class="row">
-                  <div class="col-lg-12">
-                  <table class="alternating-colors">
-                    <tr>
-                      <td>Type</td>
-                      <td>Name</td>
-                      <td>Address</td>
-                      <td>Loan Number</td>
-                    </tr>
-                    <tr>
-                      <td>Mortgagee</td>
-                      <td>J,P. Morgan Chase</td>
-                      <td>PO Box 183166 Columbus, OH 43218</td>
-                      <td>JP-93-810381</td>
-                    </tr>
-                    <tr>
-                      <td>Mortgagee</td>
-                      <td>J,P. Morgan Chase</td>
-                      <td>PO Box 183166 Columbus, OH 43218</td>
-                      <td>JP-93-810381</td>
-                    </tr>
-                  </table>
+                <div id="table-alternating-colors">
+                  <div class="row">
+                    <div class="col-lg-12">
+                    <table>
+                      <tbody>
+                        <tr id="header-row">
+                          <td>Type</td>
+                          <td>Name</td>
+                          <td>Address</td>
+                          <td>Loan Number</td>
+                        </tr>
+                      </tbody>
+                      <tbody class="list">
+                        <tr>
+                          <td>Mortgagee</td>
+                          <td>J,P. Morgan Chase</td>
+                          <td>PO Box 183166 Columbus, OH 43218</td>
+                          <td>JP-93-810381</td>
+                        </tr>
+                        <tr>
+                          <td>Mortgagee</td>
+                          <td>J,P. Morgan Chase</td>
+                          <td>PO Box 183166 Columbus, OH 43218</td>
+                          <td>JP-93-810381</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -239,7 +246,7 @@ window.onload = function() {
                       <div class="overview-data">
                         <div class="label">Payment Type</div>
                         <div class="value-header">Monthly Credit Card Payments</div>
-                        <div class="label">Change Payment Type</div>
+                        <div><a href="manage-expand.html#paymentType">Change Payment Type</a></div>
                       </div>
                     </div>
                   </div>
@@ -248,8 +255,9 @@ window.onload = function() {
                   <div class="overview-data value-header">
                     <span id="account-status-warning">Warning</span>
                   </div>
-                  <div class="label">
-                    The payment due 5/28/18 did not process because of:<br><span id="payment-status">Expired Card</span>
+                  <div class="account-status">
+                    The payment due 5/28/18 did not process because of:
+                    <p id="payment-status">Expired Card</p>
                   </div>
                 </div>
               </div>
@@ -274,100 +282,100 @@ window.onload = function() {
                   </div>
                 </div>
               </div>
-              <div id="payments">
+              <div id="table-alternating-colors">
               <div class="row">
                 <div class="col-lg-12">
-                  <table class="alternating-colors">
+                  <table>
                     <tbody>
                       <tr id="header-row">
                         <td><span class="sort" data-sort="dueDate">Due Date</span></td>
                         <td><span class="sort" data-sort="processedDate">Processed</span></td>
-                        <td><span class="sort">$ Due</span></td>
-                        <td><span class="sort">Payment Method</span></td>
+                        <td><span class="sort" data-sort="amountDue">$ Due</span></td>
+                        <td><span class="sort" data-sort="paymentMethod">Payment Method</span></td>
                         <td><span class="sort" data-sort="status">Status</span></td>
-                        <td><span class="sort">Balance</span></td>
+                        <td><span class="sort" data-sort="balance">Balance</span></td>
                       </tr>
                     </tbody>
                     <tbody class="list">
                       <tr>
                         <td class="dueDate">5/28/18</td>
                         <td class="processedDate">Error</td>
-                        <td>$37.50</td>
-                        <td>Monthly Credit Card</td>
+                        <td class="amountDue">$37.50</td>
+                        <td class="paymentMethod">Monthly Credit Card</td>
                         <td class="status">Expired Card</td>
-                        <td>$262.50</td>
+                        <td class="balance">$262.50</td>
                       </tr>
                       <tr>
                         <td class="dueDate">4/28/18</td>
                         <td class="processedDate">4/28/18</td>
-                        <td>$37.50</td>
-                        <td>Monthly Credit Card</td>
+                        <td class="amountDue">$37.50</td>
+                        <td class="paymentMethod">Monthly Credit Card</td>
                         <td class="status">Invalid Card Number</td>
-                        <td>$262.50</td>
+                        <td class="balance">$262.50</td>
                       </tr>
                       <tr>
                         <td class="dueDate">3/28/18</td>
                         <td class="processedDate">3/28/18</td>
-                        <td>$37.50</td>
-                        <td>Monthly Credit Card</td>
+                        <td class="amountDue">$37.50</td>
+                        <td class="paymentMethod">Monthly Credit Card</td>
                         <td class="status">Approved</td>
-                        <td>$300.00</td>
+                        <td class="balance">$300.00</td>
                       </tr>
                       <tr>
                         <td class="dueDate">2/28/18</td>
                         <td class="processedDate">2/28/18</td>
-                        <td>$37.50</td>
-                        <td>Monthly Credit Card</td>
+                        <td class="amountDue">$37.50</td>
+                        <td class="paymentMethod">Monthly Credit Card</td>
                         <td class="status">Approved</td>
-                        <td>$337.50</td>
+                        <td class="balance">$337.50</td>
                       </tr>
                       <tr>
                         <td class="dueDate">1/28/18</td>
                         <td class="processedDate">1/28/18</td>
-                        <td>$37.50</td>
-                        <td>Monthly Credit Card</td>
+                        <td class="amountDue">$37.50</td>
+                        <td class="paymentMethod">Monthly Credit Card</td>
                         <td class="status">No Card Record</td>
-                        <td>$375.00</td>
+                        <td class="balance">$375.00</td>
                       </tr>
                       <tr>
                         <td class="dueDate">12/28/17</td>
                         <td class="processedDate">12/28/17</td>
-                        <td>$37.50</td>
-                        <td>Monthly Credit Card</td>
+                        <td class="amountDue">$37.50</td>
+                        <td class="paymentMethod">Monthly Credit Card</td>
                         <td class="status">Approved</td>
-                        <td>$412.50</td>
+                        <td class="balance">$412.50</td>
                       </tr>
                       <tr>
                         <td class="dueDate">11/28/17</td>
                         <td class="processedDate">11/28/17</td>
-                        <td>$450.00</td>
-                        <td>Monthly Credit Card</td>
+                        <td class="amountDue">$450.00</td>
+                        <td class="paymentMethod">Monthly Credit Card</td>
                         <td class="status">Approved</td>
-                        <td>$0</td>
+                        <td class="balance">$0</td>
                       </tr>
                       <tr>
                         <td class="dueDate">10/28/17</td>
                         <td class="processedDate">10/28/17</td>
-                        <td>$37.50</td>
-                        <td>Monthly Echeck</td>
+                        <td class="amountDue">$37.50</td>
+                        <td class="paymentMethod">Monthly Echeck</td>
                         <td class="status">Approved</td>
-                        <td>$412.50</td>
+                        <td class="balance">$412.50</td>
                       </tr>
                       <tr>
                         <td class="dueDate">9/28/17</td>
                         <td class="processedDate">Error</td>
-                        <td>$450.00</td>
-                        <td>Annual Credit Card</td>
+                        <td class="amountDue">$450.00</td>
+                        <td class="paymentMethod">Annual Credit Card</td>
                         <td class="status">Expired Card</td>
-                        <td>$450.00</td>
+                        <td class="balance">$450.00</td>
                       </tr>
                       <tr>
                         <td class="dueDate">8/28/17</td>
                         <td class="processedDate">8/28/17</td>
-                        <td>$37.50</td>
-                        <td>Annual Echeck</td>
+                        <td class="amountDue">$37.50</td>
+                        <td class="paymentMethod">Annual Echeck</td>
                         <td class="status">Pending</td>
-                        <td>$412.50</td>
+                        <td class="balance">$412.50</td>
                       </tr>
                     </tbody>
                   </table>
@@ -472,7 +480,7 @@ window.onload = function() {
                   <span class="section-header">Endorsement History</span>
                 </div>
               </div>
-              <div id="endorsements">
+              <div id="table-alternating-colors">
               <div class="row">
                 <div class="col-lg-12">
                   <table>
@@ -488,13 +496,13 @@ window.onload = function() {
                         <td class="dateAdded">5/28/18</td>
                         <td class="effectiveDate">5/31/18</td>
                         <td class="status">Added to policy</td>
-                        <td><button class="download">Dec Page</button></td>
+                        <td id="table-button"><button class="download">Dec Page</button></td>
                       </tr>
                       <tr>
                         <td class="dateAdded">1/15/18</td>
                         <td class="effectiveDate">1/17/18</td>
                         <td class="status">Added to policy</td>
-                        <td><button class="download">Dec Page</button></td>
+                        <td id="table-button"><button class="download">Dec Page</button></td>
                       </tr>
                     </tbody>
                   </table>
@@ -511,33 +519,33 @@ window.onload = function() {
                   <span class="section-header">Claims History</span>
                 </div>
               </div>
-              <div id="claims">
+              <div id="table-alternating-colors">
               <div class="row">
                 <div class="col-lg-12">
-                  <table class="alternating-colors">
+                  <table>
                     <tbody>
                       <tr id="header-row">
                         <td><span class="sort" data-sort="accDate">Acc. Date</span></td>
-                        <td><span class="sort">Claim #</span></td>
+                        <td><span class="sort" data-sort="claimNumber">Claim #</span></td>
                         <td><span class="sort" data-sort="status">Status</span></td>
-                        <td><span class="sort">Loss Incurred</span></td>
-                        <td><span class="sort">Description</span></td>
+                        <td><span class="sort" data-sort="lossIncurred">Loss Incurred</span></td>
+                        <td><span class="sort" data-sort="description">Description</span></td>
                       </tr>
                     </tbody>
                     <tbody class="list">
                       <tr>
                         <td class="accDate">5/28/18</td>
-                        <td>HMCB18010001-3</td>
+                        <td class="claimNumber">HMCB18010001-3</td>
                         <td class="status">Open</td>
-                        <td>$5,538.29</td>
-                        <td id="claimDescription">Ceiling in living room, furniture, wood floors damaged, due to pipe bursting.</td>
+                        <td class="lossIncurred">$5,538.29</td>
+                        <td id="claimDescription" class="description">Ceiling in living room, furniture, wood floors damaged, due to pipe bursting.</td>
                       </tr>
                       <tr>
                         <td class="accDate">1/18/18</td>
-                        <td>HMCB10010090-1</td>
+                        <td class="claimNumber">HMCB10010090-1</td>
                         <td class="status">Closed</td>
-                        <td>$25,300.00</td>
-                        <td id="claimDescription">Part of house burned due to electrical fire.</td>
+                        <td class="lossIncurred">$25,300.00</td>
+                        <td id="claimDescription" class="description">Part of house burned due to electrical fire.</td>
                       </tr>
                     </tbody>
                   </table>
@@ -550,7 +558,7 @@ window.onload = function() {
             <div class="additional-footer">
               <div class="row">
                 <div class="col-lg-12">
-                  <button class="add">New Claim</button>
+                  <button id="newClaim" class="add">New Claim</button>
                   <button class="download">Loss Run</button>
                 </div><!--/col -->
               </div><!-- /row -->
@@ -617,9 +625,14 @@ $('button.add').click(function(){
   window.location.href = "manage-expand.html";
 });
 
+/* + new claim button to swyfft.com claims */
+$('button#newClaim').click(function(){
+  window.location.href = "https://www.swyfft.com/Claims";
+});
+
   /* payment history table sorting */
   var options = {
-    valueNames: [ 'dueDate', 'processedDate', 'status' ]
+    valueNames: [ 'dueDate', 'processedDate', 'amountDue', 'paymentMethod', 'status', 'balance' ]
   };
 
   var paymentList = new List('payments', options);
@@ -641,7 +654,7 @@ $('button.add').click(function(){
 
   /* claims history table sorting */
   var options = {
-    valueNames: [ 'accDate', 'status' ]
+    valueNames: [ 'accDate', 'status', 'lossIncurred', 'description' ]
   };
 
   var claimsList = new List('claims', options);

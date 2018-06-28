@@ -97,6 +97,14 @@ a {
   line-height: 1;
   color: #000; }
 
+.modal-title {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #000;
+  margin: 0 auto;
+  text-align: center; }
+
 button.secondary {
   background-color: #8fbf21;
   color: #FFFFFF;
@@ -507,6 +515,14 @@ table {
   color: #342E39;
   font-weight: 400; }
 
+.account-status {
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+  color: #342E39;
+  max-width: 242px;
+  font-size: 16px; }
+
 #account-status-warning {
   font-weight: 700;
   padding-left: 35px;
@@ -526,6 +542,62 @@ table {
 #date {
   display: block;
   min-height: 300px; }
+
+#table-alternating-colors {
+  padding-top: 0px; }
+  #table-alternating-colors .list {
+    font-family: sans-serif; }
+  #table-alternating-colors .list td {
+    padding: 15px 10px;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    line-height: 1.3;
+    color: black;
+    /* defined in _fonts.scss */ }
+  #table-alternating-colors #header-row {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    color: #342E39;
+    font-weight: 700;
+    color: #8E8E8E;
+    text-decoration: none;
+    height: 30px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    color: #342E39;
+    font-weight: 700; }
+    #table-alternating-colors #header-row td {
+      padding: 0 10px; }
+    #table-alternating-colors #header-row span {
+      cursor: pointer; }
+      #table-alternating-colors #header-row span:hover {
+        color: #8fbf21; }
+  #table-alternating-colors tbody.list tr:nth-child(odd) {
+    background-color: #F2F4F5; }
+  #table-alternating-colors input {
+    border: solid 1px #E8EAEB;
+    border-radius: 30px;
+    padding: 7px 14px;
+    margin-bottom: 20px;
+    width: 100%;
+    cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    line-height: 1.3;
+    color: black;
+    /* defined in _fonts.scss */ }
+    #table-alternating-colors input::placeholder {
+      color: #8E8E8E !important; }
+  #table-alternating-colors input:focus {
+    outline: none;
+    border-color: #8fbf21; }
+
+#table-button {
+  text-align: right; }
 
 .internal-section {
   margin-bottom: 40px; }
@@ -607,6 +679,66 @@ span.email {
 
 #claimDescription {
   width: 327px; }
+
+.modal-dialog {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 86%;
+  border-top: 3px solid #8fbf21;
+  margin-top: 20%; }
+
+button.modal-close {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #000;
+  border: none;
+  background-color: none;
+  color: #342E39;
+  float: right; }
+  button.modal-close:hover {
+    color: #8fbf21;
+    text-decoration: none !important; }
+
+.modal-header {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #000;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 0 25px 0;
+  max-width: 62%;
+  border: none; }
+
+.modal-body {
+  max-width: 84%;
+  margin: 0 auto;
+  min-height: 500px;
+  max-height: 800px;
+  overflow: scroll; }
+
+#modal-emphasis {
+  font-weight: bold; }
+
+#old-value-header {
+  color: #F0717F; }
+
+#new-value-header {
+  color: #8fbf21; }
+
+#endorsement-changes td:nth-child(2) {
+  color: #979899; }
+
+td.align-left {
+  text-align: left; }
+
+td.align-right {
+  text-align: right; }
+
+.modal-actions {
+  padding: 0;
+  margin: 0; }
 
 /* UNIVERSAL */
 html,
