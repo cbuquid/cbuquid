@@ -68,6 +68,10 @@ table{
 
 }
 
+button.test{
+	@include primary-button("../img/icons/link.png");
+}
+
 @mixin account-status($icon-url: null){
 	font-weight: 700;
 	padding-left: $unit-2;
@@ -91,3 +95,4 @@ table{
 	margin-top: $unit;
 	font-weight: 700;
 }
+
