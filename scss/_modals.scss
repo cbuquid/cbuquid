@@ -11,7 +11,10 @@ button.modal-close {
   border:none;
   background-color: none;
   color: $black;
-  float:right;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 1000;
   &:hover {
     color: $green-1;
     text-decoration: none !important;
@@ -33,6 +36,7 @@ button.modal-close {
   min-height: 500px;
   max-height: 800px;
   overflow: scroll;
+  padding: 0;
 }
 
 #modal-emphasis {
@@ -63,4 +67,40 @@ td.align-right {
 .modal-actions {
   padding: 0;
   margin: 0;
+}
+
+#modal-1-container .modal-title{
+  margin-top: 40px;
+}
+
+/* display/show modal stuff */
+
+#modal-1-container.hidden, #modal-2-container.hidden{
+  display: none;
+}
+
+#modal-2-container{
+  display: flex;
+  min-height: 400px;
+  align-items: center;
+
+  #left{
+    background-color: #DBDBEB;
+    height: 400px;
+    padding: 50px;    
+  }
+
+  #right{
+    padding: 50px;
+  }
+
+  .modal-title{
+    text-align: left !important;
+    margin-bottom: 20px;
+  }
+
+  .modal-header{
+    max-width: none;
+    padding: 0;
+  }
 }

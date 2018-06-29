@@ -47,6 +47,15 @@ button.secondary{
 		background-color: $black;
 		border: none;
 	}
+
+    &:disabled{
+        cursor: default;
+        opacity: 0.3;
+
+        &:hover{
+            background-color: $green-1;
+        }
+    }
 }
 
 button{

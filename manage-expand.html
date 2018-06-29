@@ -428,78 +428,93 @@
       <div class="row">
         <div class="col-lg-12">
             <div class="modal-dialog">
-              <div class="row">
-                <div class="col-lg-12">
-                  <button class="modal-close" data-dismiss="modal" data-target="#submit-endorsements-modal" aria-hidden="true"><img width="15px" src="../swyfftdesign/img/icons/close.svg"></button>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="modal-header">
-                    <h2 class="modal-title">You are making the following changes. <span id="modal-emphasis">Please confirm:</span></h2>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="modal-body">
-                    <div id="table-alternating-colors">
-                      <table>
-                        <tbody>
-                          <tr id="header-row">
-                            <td>Endorsement</td>
-                            <td id="old-value-header">Old Values</td>
-                            <td id="new-value-header">New Values</td>
-                          </tr>
-                        </tbody>
-                        <tbody id="endorsement-changes" class="list">
-                          <tr>
-                            <td>Effective Date</td>
-                            <td>12/28/17</td>
-                            <td>12/31/17</td>
-                          </tr>
-                          <tr>
-                            <td>Payment Type</td>
-                            <td>Monthly Credit Card Payments</td>
-                            <td>Annual Escrow Payments</td>
-                          </tr>
-                          <tr>
-                            <td>Primary Insured</td>
-                            <td>Wanda Geisler</td>
-                            <td>Wanda Geiseler</td>
-                          </tr>
-                          <tr>
-                            <td>Additional Named Insured</td>
-                            <td>None Listed</td>
-                            <td>Tim Geisler, tgeisler@gmail.com, 555-555-5555, 200 Davis St, Vacaville, CA 95687</td>
-                          </tr>
-                          <tr>
-                            <td>Additional Interest #1</td>
-                            <td>J.P. Morgan Chase, JP-93-810381, P.O. Box 183166, Columbus, OH 43218</td>
-                            <td>Wells Fargo, WF-23-810381, P.O. Box 10335, Des Moines, IA 50306</td>
-                          </tr>
-                          <tr>
-                            <td>Additional Interest #2</td>
-                            <td>Tim Geiseler, 200 Davis St, Vacaville, CA 95687</td>
-                            <td>Deleted</td>
-                          </tr>
-                        </tbody>
-                      </table>
+
+              <div id="modal-1-container">
+
+                  <button class="modal-close" data-dismiss="modal" data-target="#submit-endorsements-modal" aria-hidden="true"><img width="15px" src="../swyfftdesign/img/icons/close.png"></button>
+                
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="modal-header">
+                      <h2 class="modal-title">You are making the following changes. <span id="modal-emphasis">Please confirm:</span></h2>
                     </div>
                   </div>
                 </div>
-              </div>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="modal-body">
+                      <div id="table-alternating-colors">
+                        <table>
+                          <tbody>
+                            <tr id="header-row">
+                              <td>Endorsement</td>
+                              <td id="old-value-header">Old Values</td>
+                              <td id="new-value-header">New Values</td>
+                            </tr>
+                          </tbody>
+                          <tbody id="endorsement-changes" class="list">
+                            <tr>
+                              <td>Effective Date</td>
+                              <td>12/28/17</td>
+                              <td>12/31/17</td>
+                            </tr>
+                            <tr>
+                              <td>Payment Type</td>
+                              <td>Monthly Credit Card Payments</td>
+                              <td>Annual Escrow Payments</td>
+                            </tr>
+                            <tr>
+                              <td>Primary Insured</td>
+                              <td>Wanda Geisler</td>
+                              <td>Wanda Geiseler</td>
+                            </tr>
+                            <tr>
+                              <td>Additional Named Insured</td>
+                              <td>None Listed</td>
+                              <td>Tim Geisler, tgeisler@gmail.com, 555-555-5555, 200 Davis St, Vacaville, CA 95687</td>
+                            </tr>
+                            <tr>
+                              <td>Additional Interest #1</td>
+                              <td>J.P. Morgan Chase, JP-93-810381, P.O. Box 183166, Columbus, OH 43218</td>
+                              <td>Wells Fargo, WF-23-810381, P.O. Box 10335, Des Moines, IA 50306</td>
+                            </tr>
+                            <tr>
+                              <td>Additional Interest #2</td>
+                              <td>Tim Geiseler, 200 Davis St, Vacaville, CA 95687</td>
+                              <td>Deleted</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-              <div class="additional-footer">
-                <table class="modal-actions">
-                  <tbody>
-                  <tr>
-                    <td class="align-left"><a href="manage-expand.html"><button class="back">back</button></a></td>
-                    <td class="align-right"><button class="secondary">Confirmed, Generate New Dec Page</button></td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
+                <div class="additional-footer">
+                  <table class="modal-actions">
+                    <tbody>
+                    <tr>
+                      <td class="align-left"><a href="manage-expand.html"><button class="back">back</button></a></td>
+                      <td class="align-right"><button id="confirm-endorsement" class="secondary">Confirmed, Generate New Dec Page</button></td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div><!-- /modal-1-container -->
+              <div id="modal-2-container" class="hidden">
+                                  <a href="index.html" class="btn-tag"><button class="modal-close"><img width="15px" src="../swyfftdesign/img/icons/close.png"></button></a>
+                
+                  <div id="left">
+                    <img src="img/endorser.png">
+                  </div>
+                  <div id="right">
+                    <div class="modal-header">
+                      <h2 class="modal-title">Congrats! You’ve added an endorsement for <span id="modal-emphasis">200 Davis St, Vacaville, CA 93567</span></h2>
+                    </div>
+                    <div class="body-copy">We’re working on your new dec page, which you will receive at joe@gmail.com within 5 minutes.</div>
+                  </div>
+
+              </div><!-- /modal-2-container -->
           </div>
         </div>
       </div>
@@ -557,6 +572,13 @@ $('.additional-interests-change').change(function(){
 $('#cancel-additional-interests').click(function(){
   $('#additional-interests-form')[0].reset();
   $(this).removeClass('active');
+});
+
+
+/* modal 1 to modal 2 */
+$('#confirm-endorsement').click(function(){
+  $("#modal-1-container").addClass('hidden');
+  $("#modal-2-container").removeClass('hidden');
 });
 
 
